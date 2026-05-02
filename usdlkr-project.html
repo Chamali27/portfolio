@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USD/LKR Exchange Rate Prediction | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-hero-tags">
+                <span class="tag">Python</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">Random Forest</span>
+                <span class="tag">Gradient Boosting</span>
+                <span class="tag">CRISP-DM</span>
+                <span class="tag">Group Project</span>
+            </div>
+            <h1>USD/LKR Exchange Rate Prediction</h1>
+            <p class="project-hero-sub">A CRISP-DM machine learning approach to forecast LKR/USD exchange rates using 16 years of Central Bank of Sri Lanka data, with analysis of dollar dominance and its impact on Sri Lanka's economy.</p>
+        </div>
+    </div>
+
+    <div class="stats-strip">
+        <div class="stat-item"><div class="stat-num">0.838%</div><div class="stat-label">MAPE (XGBoost)</div></div>
+        <div class="stat-item"><div class="stat-num">0.904</div><div class="stat-label">R² Score</div></div>
+        <div class="stat-item"><div class="stat-num">3,346</div><div class="stat-label">Daily Records</div></div>
+        <div class="stat-item"><div class="stat-num">30-Day</div><div class="stat-label">Forecast Horizon</div></div>
+    </div>
+
+    <div class="project-body">
+
+        <!-- Overview -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Project Overview</h2>
+            <p>This research paper investigates the dominance of the US Dollar and its economic impact on developing countries — specifically Sri Lanka. A CRISP-DM machine learning pipeline was developed to analyze 16 years of daily LKR/USD exchange rate data obtained from the Central Bank of Sri Lanka (May 2010 – February 2026), comparing Random Forest, XGBoost, and Gradient Boosting models, followed by an ensemble approach. The study provides 30-day forward predictions with 95% confidence intervals and delivers policy-relevant insights.</p>
+            <div class="team-row" style="margin-top:1.25rem;">
+                <span class="team-label">Team:</span>
+                <span class="team-members">WACI Abeysekara &nbsp;·&nbsp; RL Hewanayaka &nbsp;·&nbsp; MZM Hussein &nbsp;·&nbsp; MN Mohamed </span>
+            </div>
+            <div class="team-row" style="margin-top:0.5rem;">
+                <span class="team-label">Presented at:</span>
+                <span class="team-members">ADScAI 2026 · University of Moratuwa · April 2026</span>
+            </div>
+        </section>
+
+        <!-- Key Questions -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Questions Explored</h2>
+            <div class="questions-grid">
+                <div class="question-card">To what extent does USD dominance in global trade and energy influence LKR exchange rate fluctuations?</div>
+                <div class="question-card">How accurately can machine learning models predict the LKR/USD rate over a 30-day horizon?</div>
+                <div class="question-card">Which model — Random Forest, XGBoost, Gradient Boosting, or Ensemble — performs best for this forecasting task?</div>
+                <div class="question-card">What temporal patterns and seasonal cycles exist in the 16-year exchange rate dataset?</div>
+                <div class="question-card">How did dollar dominance contribute to Sri Lanka's 2022 economic crisis?</div>
+                <div class="question-card">What policy insights can help developing countries reduce dependency on the US Dollar?</div>
+            </div>
+        </section>
+
+        <!-- Dollar Dominance Context -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Dollar Dominance: The Context</h2>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+
+                <div style="background:rgba(56,189,248,0.04); border:1px solid rgba(56,189,248,0.12); border-radius:10px; padding:1.25rem;">
+                    <div style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#38bdf8; letter-spacing:0.08em; margin-bottom:0.5rem;">GLOBAL SHARE</div>
+                    <div style="font-size:1.6rem; font-weight:700; color:#dde6f0; margin-bottom:0.4rem;">58%</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">of global foreign exchange reserves held in USD (2025)</div>
+                </div>
+
+                <div style="background:rgba(56,189,248,0.04); border:1px solid rgba(56,189,248,0.12); border-radius:10px; padding:1.25rem;">
+                    <div style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#38bdf8; letter-spacing:0.08em; margin-bottom:0.5rem;">FX TRANSACTIONS</div>
+                    <div style="font-size:1.6rem; font-weight:700; color:#dde6f0; margin-bottom:0.4rem;">88%</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">of all foreign exchange transactions involve the US Dollar</div>
+                </div>
+
+                <div style="background:rgba(56,189,248,0.04); border:1px solid rgba(56,189,248,0.12); border-radius:10px; padding:1.25rem;">
+                    <div style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#38bdf8; letter-spacing:0.08em; margin-bottom:0.5rem;">GLOBAL TRADE</div>
+                    <div style="font-size:1.6rem; font-weight:700; color:#dde6f0; margin-bottom:0.4rem;">80%</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">of global trade is invoiced in US Dollars</div>
+                </div>
+
+                <div style="background:rgba(251,191,36,0.04); border:1px solid rgba(251,191,36,0.15); border-radius:10px; padding:1.25rem;">
+                    <div style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#fbbf24; letter-spacing:0.08em; margin-bottom:0.5rem;">SRI LANKA 2022 CRISIS</div>
+                    <div style="font-size:1.6rem; font-weight:700; color:#dde6f0; margin-bottom:0.4rem;">$20M</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">FX reserves remaining (down from $7.6B in 2019)</div>
+                </div>
+
+            </div>
+
+            <p>The study traces dollar dominance from the 1944 Bretton Woods Agreement through the Nixon Shock (1971), the petrodollar agreement with Saudi Arabia (1974–2024), and its ongoing implications for developing economies like Sri Lanka. The 2022 Sri Lankan economic crisis — triggered by compounding effects of the Easter attacks (2019), COVID-19 (2020–21), political instability, and poor fiscal decisions — is presented as a case study in how dollar dependency amplifies economic vulnerability.</p>
+        </section>
+
+        <!-- Methodology -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Methodology (CRISP-DM)</h2>
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="method-num">01</div>
+                    <div class="method-text">
+                        <strong>Data Collection & Understanding</strong>
+                        <p>3,346 daily LKR/USD exchange rate observations sourced from the Central Bank of Sri Lanka (May 2010 – Feb 2026). ADF test confirmed non-stationarity; seasonal decomposition revealed the 2022 crisis as a clear inflection point.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">02</div>
+                    <div class="method-text">
+                        <strong>Feature Engineering</strong>
+                        <p>14 features constructed — Moving Averages (MA_7, MA_30, MA_90), volatility measures, a 30-day range indicator, and lag features (1, 2, 3, 5, 7, 14, 30 days) to capture short-term momentum and long-term trends.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">03</div>
+                    <div class="method-text">
+                        <strong>Model Training & Comparison</strong>
+                        <p>Trained and evaluated Random Forest, XGBoost, and Gradient Boosting on an 80/20 train-test split. A weighted ensemble (XGBoost 0.40, RF 0.30, GB 0.30) was built to combine complementary strengths.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">04</div>
+                    <div class="method-text">
+                        <strong>Evaluation</strong>
+                        <p>Models assessed using MAPE, R², MAE, and RMSE on 652 unseen test samples (May 2023 – Feb 2026), simulating real-world deployment conditions.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">05</div>
+                    <div class="method-text">
+                        <strong>30-Day Recursive Forecast</strong>
+                        <p>Deployed recursive multi-step forecasting where each day's prediction feeds back into the next. 95% confidence intervals provided for risk assessment across the full forecast horizon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Model Performance -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Model Performance Comparison</h2>
+            <div class="results-table-wrap">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>MAE (LKR)</th>
+                            <th>RMSE</th>
+                            <th>MAPE (%)</th>
+                            <th>R²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best-row">
+                            <td>XGBoost ⭐</td>
+                            <td>2.5432</td>
+                            <td>3.3203</td>
+                            <td>0.838%</td>
+                            <td>0.9040</td>
+                        </tr>
+                        <tr>
+                            <td>Ensemble</td>
+                            <td>2.8471</td>
+                            <td>3.5781</td>
+                            <td>0.940%</td>
+                            <td>0.8886</td>
+                        </tr>
+                        <tr>
+                            <td>Gradient Boosting</td>
+                            <td>3.3131</td>
+                            <td>3.8975</td>
+                            <td>1.085%</td>
+                            <td>0.8678</td>
+                        </tr>
+                        <tr>
+                            <td>Random Forest</td>
+                            <td>3.5993</td>
+                            <td>4.4910</td>
+                            <td>1.188%</td>
+                            <td>0.8245</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color:var(--text-muted); font-family:'Space Mono',monospace; font-size:0.75rem; margin-top:0.75rem;">* XGBoost outperforms Random Forest by 29.5% on MAPE · Industry benchmark: MAPE &lt; 2%</p>
+        </section>
+
+        <!-- Three Historical Phases -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Three Phases of LKR/USD Exchange Rate (2010–2026)</h2>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
+
+                <div style="position:relative; background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:1.25rem; overflow:hidden;">
+                    <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#38bdf8;"></div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#38bdf8; letter-spacing:0.08em; margin-bottom:0.6rem;">PHASE 01 · 2010–2020</div>
+                    <div style="font-size:1rem; font-weight:600; color:#dde6f0; margin-bottom:0.5rem;">Stable Depreciation</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">110 → 200 LKR/USD at ~6.2% annual depreciation rate. Gradual, predictable decline.</div>
+                </div>
+
+                <div style="position:relative; background:#0f1929; border:1px solid rgba(251,191,36,0.2); border-radius:10px; padding:1.25rem; overflow:hidden;">
+                    <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#fbbf24;"></div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#fbbf24; letter-spacing:0.08em; margin-bottom:0.6rem;">PHASE 02 · 2022 CRISIS</div>
+                    <div style="font-size:1rem; font-weight:600; color:#dde6f0; margin-bottom:0.5rem;">80% Crash</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">Spike to 365 LKR/USD within months. Caused by tax cuts, import restrictions, and political collapse.</div>
+                </div>
+
+                <div style="position:relative; background:#0f1929; border:1px solid rgba(129,140,248,0.2); border-radius:10px; padding:1.25rem; overflow:hidden;">
+                    <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#818cf8;"></div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#818cf8; letter-spacing:0.08em; margin-bottom:0.6rem;">PHASE 03 · 2023–2026</div>
+                    <div style="font-size:1rem; font-weight:600; color:#dde6f0; margin-bottom:0.5rem;">IMF Recovery</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">Stabilization at 300–310 LKR/USD following IMF intervention and structural adjustment programs.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 30-Day Forecast Results -->
+        <section class="project-section">
+            <h2 class="project-section-title">// 30-Day Recursive Forecast (Feb 10 – Mar 10, 2026)</h2>
+
+            <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:1.5rem; font-family:'Space Mono',monospace; font-size:0.8rem;">
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem;">
+
+                    <div>
+                        <div style="color:#38bdf8; font-size:0.62rem; letter-spacing:0.08em; margin-bottom:0.5rem;">DAY 1 FORECAST</div>
+                        <div style="font-size:1.4rem; font-weight:700; color:#dde6f0;">307.16 LKR/USD</div>
+                        <div style="color:#7a93ab; font-size:0.72rem; margin-top:0.3rem;">Based on 100% historic data · Highest confidence</div>
+                    </div>
+
+                    <div>
+                        <div style="color:#fbbf24; font-size:0.62rem; letter-spacing:0.08em; margin-bottom:0.5rem;">DAYS 10–20 TREND</div>
+                        <div style="font-size:1.4rem; font-weight:700; color:#dde6f0;">~301 LKR/USD</div>
+                        <div style="color:#7a93ab; font-size:0.72rem; margin-top:0.3rem;">Downward momentum · Moderate confidence</div>
+                    </div>
+
+                    <div>
+                        <div style="color:#818cf8; font-size:0.62rem; letter-spacing:0.08em; margin-bottom:0.5rem;">DAYS 25–30 STABILITY</div>
+                        <div style="font-size:1.4rem; font-weight:700; color:#dde6f0;">~301 LKR/USD</div>
+                        <div style="color:#7a93ab; font-size:0.72rem; margin-top:0.3rem;">Stabilization with slight fluctuations</div>
+                    </div>
+
+                </div>
+
+                <div style="border-top:1px solid rgba(56,189,248,0.08); margin-top:1rem; padding-top:1rem; color:#7a93ab; font-size:0.72rem;">
+                    <span style="color:#38bdf8;">95% CI:</span> ŷ ± 1.96 · σ_test &nbsp;|&nbsp; Error propagation increases with forecast horizon &nbsp;|&nbsp; Moving averages and volatility recalculated each step
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Insights -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-icon">🏆</div>
+                    <div class="insight-text">XGBoost achieved best performance (MAPE: 0.838%, R²: 0.904), outperforming industry benchmark.</div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">📈</div>
+                    <div class="insight-text">XGBoost reduced MAPE by 29.5% compared to Random Forest, proving stronger for time-series forecasting.</div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">🔗</div>
+                    <div class="insight-text">Lag_1, Lag_7, and MA_30 were key predictors, capturing short- and mid-term trends.</div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">⚠️</div>
+                    <div class="insight-text">Errors peaked during the 2022 crisis (8-12 LKR), but XGBoost recovered fastest from shocks.</div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">🌍</div>
+                    <div class="insight-text">USD dominance remains strong in global oil trade despite the post-2024 petrodollar shift.</div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">💡</div>
+                    <div class="insight-text">Ensemble model (MAPE: 0.940%) is recommended for stable, low-overfitting production use.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Technical Stack</h2>
+            <div class="skills-table" style="margin-top:0;">
+                <div class="skills-row">
+                    <div class="skills-category">Language</div>
+                    <div class="skills-items">
+                        <span>Python 3.11</span>
+                    </div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">ML Libraries</div>
+                    <div class="skills-items">
+                        <span>scikit-learn 1.4.0</span><span>XGBoost 2.0.3</span>
+                    </div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Data Libraries</div>
+                    <div class="skills-items">
+                        <span>pandas 2.1.4</span><span>numpy 1.26.3</span>
+                    </div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Framework</div>
+                    <div class="skills-items">
+                        <span>CRISP-DM</span>
+                    </div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Data Source</div>
+                    <div class="skills-items">
+                        <span>Central Bank of Sri Lanka</span><span>Daily Exchange Rates</span><span>2010–2026</span>
+                    </div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-category">Deployment</div>
+                    <div class="skills-items">
+                        <span>Pickle serialization</span><span>&lt;100ms inference</span><span>Standard CPU</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Paper -->
+        <section class="project-section">
+            <h2 class="project-section-title">// Research Paper</h2>
+            <p style="color:var(--text-muted); margin-bottom:1.25rem; font-style:italic;">"Predicting USD/LKR Exchange Rate: A CRISP-DM Machine Learning Approach" - Presented at ADScAI 2026, University of Moratuwa, April 2026.</p>
+            <a href="USDLKR_Exchange_Rate_Prediction_Paper.pdf" class="github-btn" target="_blank">
+                ⌥ View Research Paper (PDF) →
+            </a>
+        </section>
+
+        <!-- GitHub -->
+        <section class="project-section">
+            <h2 class="project-section-title">// GitHub Repository</h2>
+            <a href="https://github.com/Chamali27/USD-LKR-Exchange-Rate-Prediction.git" class="github-btn" target="_blank" id="githubBtn">
+                ⌥ View Project on GitHub →
+            </a>
+        </section>
+
+        <a href="index.html#projects" class="btn btn-primary" style="margin-top:1rem;">← Back to Projects</a>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.querySelector('.nav-list');
+    hamburger?.addEventListener('click', () => {
+        navList.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
+
+    const cards = document.querySelectorAll('.insight-card, .question-card');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    cards.forEach(c => obs.observe(c));
+</script>
+
+</body>
+</html>

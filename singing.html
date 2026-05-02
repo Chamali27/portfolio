@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singing | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(3, 6, 16, 0.95);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+        .lightbox.active { display: flex; }
+        .lightbox-img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid rgba(56,189,248,0.2);
+            box-shadow: 0 0 60px rgba(0,0,0,0.8);
+            animation: lbIn 0.25s ease;
+        }
+        @keyframes lbIn {
+            from { opacity: 0; transform: scale(0.93); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1.25rem; right: 1.5rem;
+            background: none;
+            border: 1px solid rgba(56,189,248,0.25);
+            color: #38bdf8;
+            font-size: 1.1rem;
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-close:hover { background: rgba(56,189,248,0.1); border-color: #38bdf8; }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(8,13,26,0.8);
+            border: 1px solid rgba(56,189,248,0.2);
+            color: #38bdf8;
+            font-size: 1.4rem;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .lightbox-nav:hover { background: rgba(56,189,248,0.15); border-color: #38bdf8; }
+        .lightbox-prev { left: 1.5rem; }
+        .lightbox-next { right: 1.5rem; }
+        .lightbox-counter {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: rgba(56,189,248,0.5);
+            letter-spacing: 0.1em;
+        }
+        .gallery-tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .gallery-count {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.72rem;
+            color: rgba(56,189,248,0.5);
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+        }
+        .masonry-gallery img {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease, transform 0.5s ease, filter 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+        }
+        .masonry-gallery img.img-visible { opacity: 1; transform: translateY(0); }
+        .gallery-hint {
+            text-align: center;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.72rem;
+            color: rgba(122, 147, 171, 0.5);
+            padding: 0 0 2rem;
+            letter-spacing: 0.06em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<div class="gallery-hero">
+    <div class="gallery-tags">
+        <span class="tag">Performance</span>
+        <span class="tag">Vocals</span>
+        <span class="tag">Stage</span>
+    </div>
+    <h1>Singing 🎶</h1>
+    <p>Performing at events with creativity, confidence and audience engagement</p>
+    <div class="gallery-count">◈ 8 photos</div>
+    <a href="index.html#extra" class="back-btn">← Back to Portfolio</a>
+</div>
+
+<p class="gallery-hint">click any photo to view full size</p>
+
+<div class="masonry-gallery" id="gallery">
+    <img src="singing.jpeg"  alt="Singing performance" loading="lazy">
+    <img src="singing6.png"  alt="Singing performance" loading="lazy">
+    <img src="singing2.jpeg" alt="Singing performance" loading="lazy">
+    <img src="singing3.png"  alt="Singing performance" loading="lazy">
+    <img src="singing5.png"  alt="Singing performance" loading="lazy">
+    <img src="singing4.jpeg" alt="Singing performance" loading="lazy">
+    <img src="singing7.jpeg" alt="Singing performance" loading="lazy">
+    <img src="singing8.jpeg" alt="Singing performance" loading="lazy">
+</div>
+
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lbClose">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lbPrev">‹</button>
+    <img class="lightbox-img" id="lbImg" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lbNext">›</button>
+    <div class="lightbox-counter" id="lbCounter"></div>
+</div>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">// beyond the data</span>
+    </div>
+</footer>
+
+<script>
+    const imgs = document.querySelectorAll('.masonry-gallery img');
+    const revealObs = new IntersectionObserver(entries => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('img-visible'), i * 40);
+                revealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.05 });
+    imgs.forEach(img => revealObs.observe(img));
+
+    const lb      = document.getElementById('lightbox');
+    const lbImg   = document.getElementById('lbImg');
+    const lbClose = document.getElementById('lbClose');
+    const lbPrev  = document.getElementById('lbPrev');
+    const lbNext  = document.getElementById('lbNext');
+    const lbCount = document.getElementById('lbCounter');
+    const allImgs = [...imgs];
+    let current = 0;
+
+    function openLb(idx) {
+        current = idx;
+        lbImg.src = allImgs[current].src;
+        lbCount.textContent = `${current + 1} / ${allImgs.length}`;
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    allImgs.forEach((img, i) => img.addEventListener('click', () => openLb(i)));
+    lbClose.addEventListener('click', closeLb);
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+
+    lbPrev.addEventListener('click', () => {
+        current = (current - 1 + allImgs.length) % allImgs.length;
+        lbImg.src = allImgs[current].src;
+        lbCount.textContent = `${current + 1} / ${allImgs.length}`;
+    });
+
+    lbNext.addEventListener('click', () => {
+        current = (current + 1) % allImgs.length;
+        lbImg.src = allImgs[current].src;
+        lbCount.textContent = `${current + 1} / ${allImgs.length}`;
+    });
+
+    document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape')     closeLb();
+        if (e.key === 'ArrowLeft')  lbPrev.click();
+        if (e.key === 'ArrowRight') lbNext.click();
+    });
+</script>
+
+</body>
+</html>

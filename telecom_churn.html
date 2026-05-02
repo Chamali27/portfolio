@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Customer Churn Analysis | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-hero-tags">
+                <span class="tag">Python</span>
+                <span class="tag">LightGBM</span>
+                <span class="tag">SMOTE</span>
+                <span class="tag">SHAP</span>
+                <span class="tag">KMeans</span>
+                <span class="tag">Group Project</span>
+            </div>
+            <h1>Early Churn Detection & Segmentation of Telecom Customers</h1>
+            <p class="project-hero-sub">A hybrid machine learning approach combining early churn prediction with customer segmentation to support proactive retention strategies in the telecommunications industry.</p>
+        </div>
+    </div>
+
+    <div class="stats-strip">
+        <div class="stat-item"><div class="stat-num">7,043</div><div class="stat-label">Customer Records</div></div>
+        <div class="stat-item"><div class="stat-num">0.995</div><div class="stat-label">ROC-AUC Score</div></div>
+        <div class="stat-item"><div class="stat-num">0.97</div><div class="stat-label">F1-Score (LightGBM)</div></div>
+        <div class="stat-item"><div class="stat-num">8.48%</div><div class="stat-label">Early Churn Rate</div></div>
+    </div>
+
+    <div class="project-body">
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Project Overview</h2>
+            <p>This research paper addresses early customer churn — customers who leave within the first three months of subscription — using a hybrid of supervised machine learning and KMeans customer segmentation. Four ML models were compared, with LightGBM emerging as the top performer. SHAP values were used for model explainability, and threshold optimization was applied to maximize business cost savings.</p>
+            <div class="team-row">
+                <span class="team-label">Team:</span>
+                <span class="team-members">WACI Abeysekara &nbsp;·&nbsp; RL Hewanayaka &nbsp;·&nbsp; MZM Hussein &nbsp;·&nbsp; MN Mohamed</span>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Questions Explored</h2>
+            <div class="questions-grid">
+                <div class="question-card">Which customers are likely to churn within their first 3 months?</div>
+                <div class="question-card">What are the strongest predictors of early churn behavior?</div>
+                <div class="question-card">How can threshold optimization reduce misclassification costs?</div>
+                <div class="question-card">What behavioral segments exist among early churners?</div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Methodology</h2>
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="method-num">01</div>
+                    <div class="method-text">
+                        <strong>Data Collection & Preprocessing</strong>
+                        <p>Used the public Telco Customer Churn dataset (7,043 records, 21 features). Applied median imputation, label encoding, one-hot encoding, and StandardScaler normalization.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">02</div>
+                    <div class="method-text">
+                        <strong>Class Imbalance Handling (SMOTE)</strong>
+                        <p>Only 8.48% of customers were early churners. Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance the training dataset before model training.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">03</div>
+                    <div class="method-text">
+                        <strong>Model Training & Comparison</strong>
+                        <p>Trained and evaluated 4 models — Logistic Regression, Random Forest, XGBoost, and LightGBM — using precision, recall, F1-score, and ROC-AUC with 75/25 stratified split.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">04</div>
+                    <div class="method-text">
+                        <strong>Threshold Optimization & SHAP Explainability</strong>
+                        <p>Optimized LightGBM decision threshold to 0.236 for maximum business cost savings. Used SHAP values to identify key churn drivers: tenure, monthly charges, and contract type.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">05</div>
+                    <div class="method-text">
+                        <strong>Customer Segmentation (KMeans)</strong>
+                        <p>Applied KMeans clustering on early churners to identify 3 actionable behavioral segments, each with distinct retention strategies and revenue loss estimates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Model Performance Comparison</h2>
+            <div class="results-table-wrap">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1-Score</th>
+                            <th>ROC-AUC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Logistic Regression</td>
+                            <td>0.924</td>
+                            <td>0.997</td>
+                            <td>0.959</td>
+                            <td>0.983</td>
+                        </tr>
+                        <tr>
+                            <td>Random Forest</td>
+                            <td>0.962</td>
+                            <td>0.986</td>
+                            <td>0.974</td>
+                            <td>0.994</td>
+                        </tr>
+                        <tr>
+                            <td>XGBoost</td>
+                            <td>0.958</td>
+                            <td>0.987</td>
+                            <td>0.972</td>
+                            <td>0.996</td>
+                        </tr>
+                        <tr class="best-row">
+                            <td>LightGBM ⭐</td>
+                            <td>0.962</td>
+                            <td>0.984</td>
+                            <td>0.973</td>
+                            <td>0.995</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card"><div class="insight-icon">🏆</div><div class="insight-text">LightGBM achieved the best overall performance with ROC-AUC of 0.995 and F1-score of 0.97, outperforming all other models including XGBoost and Random Forest.</div></div>
+                <div class="insight-card"><div class="insight-icon">⚙️</div><div class="insight-text">Threshold optimization at 0.236 (vs default 0.5) saved $14,550 in misclassification costs by maximizing recall of early churners while minimizing false positives.</div></div>
+                <div class="insight-card"><div class="insight-icon">📊</div><div class="insight-text">SHAP analysis revealed tenure, monthly charges, and contract type as the top 3 churn drivers — shorter tenure and higher monthly bills strongly predicted early exit.</div></div>
+                <div class="insight-card"><div class="insight-icon">👥</div><div class="insight-text">KMeans clustering identified 3 distinct churn segments: Price-Sensitive, Low-Engagement, and Onboarding Failure — each requiring different targeted retention strategies.</div></div>
+                <div class="insight-card"><div class="insight-icon">💸</div><div class="insight-text">The Onboarding Failure segment showed the highest revenue loss risk — high-spending customers churning very early, often due to poor onboarding experiences.</div></div>
+                <div class="insight-card"><div class="insight-icon">✅</div><div class="insight-text">5-fold cross-validation confirmed model robustness with a mean ROC-AUC of 0.996 (std: 0.0013), demonstrating strong generalizability on unseen data.</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Research Paper</h2>
+            <p style="color:var(--text-muted); margin-bottom:1.25rem; font-style:italic;">"Early Churn Detection and Segmentation of Telecom Customers Using Machine Learning"</p>
+            <a href="Telecom_Churn_Research_Paper.pdf" class="github-btn" target="_blank">
+                ⌥ View Research Paper (PDF) →
+            </a>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// GitHub Repository</h2>
+            <a href="https://github.com/Chamali27/Early-Churn-Prediction-Telecom-ML.git" class="github-btn" target="_blank">
+                ⌥ View Project on GitHub →
+            </a>
+        </section>
+
+        <a href="index.html#projects" class="btn btn-primary" style="margin-top:1rem;">← Back to Projects</a>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.insight-card, .question-card');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    cards.forEach(c => obs.observe(c));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester Building Energy Performance | Chamali Abeysekara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+        </nav>
+    </header>
+
+    <main class="section">
+        <h1>Residential Building Energy Performance in Manchester</h1>
+
+        <p><strong>Tools Used:</strong> SQL Server, Power BI</p>
+        <p><strong>Team Project:</strong> Collaborated with a team of 4 members</p>
+        <p><strong>Team Members:</strong> Chamali Abeysekara, MN Mohamed, RL Hewanayaka, MZM Hussein</p>
+
+        <p><strong>Project Summary:</strong> Analyzed Energy Performance Certificate (EPC) data of properties in Manchester (2014–2024). The analysis explored energy efficiency, CO₂ emissions, energy costs, and building characteristics to identify trends, disparities, and areas for improvement. Interactive dashboards were created in Power BI to visualize insights for policymakers, stakeholders, and property owners.</p>
+
+        <p><strong>Insights:</strong> Heating is the largest contributor to energy costs. Mid-terrace properties, cavity walls, and specific roof types impact energy performance. Recommended upgrades like heating system improvements and solar panel installations can reduce costs and carbon emissions. Dashboards allow exploration by property type, tenure, energy rating, and geographic area for data-driven decision-making.</p>
+
+        <h3>Dashboards:</h3>
+        <div class="dashboard-grid">
+            <img src="overview_dashboard.png" alt="Overview Dashboard" class="project-dashboard">
+            <img src="property_dashboard.png" alt="Property Characteristics Dashboard" class="project-dashboard">
+            <img src="cost_dashboard.png" alt="Cost Dashboard" class="project-dashboard">
+            <img src="energy_dashboard.png" alt="Energy Efficiency Dashboard" class="project-dashboard">
+            <img src="recommendations_dashboard.png" alt="Recommendations Dashboard" class="project-dashboard">
+        </div>
+
+        <br>
+        <a href="index.html" class="btn btn-primary">Back to Portfolio</a>
+    </main>
+</body>
+</html>
