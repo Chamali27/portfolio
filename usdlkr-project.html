@@ -60,7 +60,7 @@
         <!-- Overview -->
         <section class="project-section">
             <h2 class="project-section-title">// Project Overview</h2>
-            <p>This research paper investigates the dominance of the US Dollar and its economic impact on developing countries — specifically Sri Lanka. A CRISP-DM machine learning pipeline was developed to analyze 16 years of daily LKR/USD exchange rate data obtained from the Central Bank of Sri Lanka (May 2010 – February 2026), comparing Random Forest, XGBoost, and Gradient Boosting models, followed by an ensemble approach. The study provides 30-day forward predictions with 95% confidence intervals and delivers policy-relevant insights.</p>
+            <p>This research paper investigates the dominance of the US Dollar and its economic impact on developing countries specifically Sri Lanka. A CRISP-DM machine learning pipeline was developed to analyze 16 years of daily LKR/USD exchange rate data obtained from the Central Bank of Sri Lanka (May 2010 - February 2026), comparing Random Forest, XGBoost, and Gradient Boosting models, followed by an ensemble approach. The study provides 30-day forward predictions with 95% confidence intervals and delivers policy-relevant insights.</p>
             <div class="team-row" style="margin-top:1.25rem;">
                 <span class="team-label">Team:</span>
                 <span class="team-members">WACI Abeysekara &nbsp;·&nbsp; RL Hewanayaka &nbsp;·&nbsp; MZM Hussein &nbsp;·&nbsp; MN Mohamed </span>
@@ -77,7 +77,7 @@
             <div class="questions-grid">
                 <div class="question-card">To what extent does USD dominance in global trade and energy influence LKR exchange rate fluctuations?</div>
                 <div class="question-card">How accurately can machine learning models predict the LKR/USD rate over a 30-day horizon?</div>
-                <div class="question-card">Which model — Random Forest, XGBoost, Gradient Boosting, or Ensemble — performs best for this forecasting task?</div>
+                <div class="question-card">Which model - Random Forest, XGBoost, Gradient Boosting, or Ensemble performs best for this forecasting task?</div>
                 <div class="question-card">What temporal patterns and seasonal cycles exist in the 16-year exchange rate dataset?</div>
                 <div class="question-card">How did dollar dominance contribute to Sri Lanka's 2022 economic crisis?</div>
                 <div class="question-card">What policy insights can help developing countries reduce dependency on the US Dollar?</div>
@@ -116,48 +116,55 @@
 
             </div>
 
-            <p>The study traces dollar dominance from the 1944 Bretton Woods Agreement through the Nixon Shock (1971), the petrodollar agreement with Saudi Arabia (1974–2024), and its ongoing implications for developing economies like Sri Lanka. The 2022 Sri Lankan economic crisis — triggered by compounding effects of the Easter attacks (2019), COVID-19 (2020–21), political instability, and poor fiscal decisions — is presented as a case study in how dollar dependency amplifies economic vulnerability.</p>
+            <p>The study traces dollar dominance from the 1944 Bretton Woods Agreement through the Nixon Shock (1971), the petrodollar agreement with Saudi Arabia (1974-s2024), and its ongoing implications for developing economies like Sri Lanka. The 2022 Sri Lankan economic crisis triggered by compounding effects of the Easter attacks (2019), COVID-19 (2020-21), political instability, and poor fiscal decisions is presented as a case study in how dollar dependency amplifies economic vulnerability.</p>
         </section>
 
         <!-- Methodology -->
         <section class="project-section">
             <h2 class="project-section-title">// Methodology (CRISP-DM)</h2>
+
             <div class="method-steps">
+
                 <div class="method-step">
                     <div class="method-num">01</div>
                     <div class="method-text">
-                        <strong>Data Collection & Understanding</strong>
-                        <p>3,346 daily LKR/USD exchange rate observations sourced from the Central Bank of Sri Lanka (May 2010 – Feb 2026). ADF test confirmed non-stationarity; seasonal decomposition revealed the 2022 crisis as a clear inflection point.</p>
+                        <strong>Data Understanding</strong>
+                        <p>3,346 LKR/USD observations (2010-2026). ADF test confirmed non-stationarity; 2022 crisis identified as a key shift.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">02</div>
                     <div class="method-text">
                         <strong>Feature Engineering</strong>
-                        <p>14 features constructed — Moving Averages (MA_7, MA_30, MA_90), volatility measures, a 30-day range indicator, and lag features (1, 2, 3, 5, 7, 14, 30 days) to capture short-term momentum and long-term trends.</p>
+                        <p>14 features including moving averages, volatility, and lag-based indicators to capture trends and momentum.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">03</div>
                     <div class="method-text">
-                        <strong>Model Training & Comparison</strong>
-                        <p>Trained and evaluated Random Forest, XGBoost, and Gradient Boosting on an 80/20 train-test split. A weighted ensemble (XGBoost 0.40, RF 0.30, GB 0.30) was built to combine complementary strengths.</p>
+                        <strong>Modeling</strong>
+                        <p>Random Forest, XGBoost, and Gradient Boosting trained with a weighted ensemble approach.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">04</div>
                     <div class="method-text">
                         <strong>Evaluation</strong>
-                        <p>Models assessed using MAPE, R², MAE, and RMSE on 652 unseen test samples (May 2023 – Feb 2026), simulating real-world deployment conditions.</p>
+                        <p>Performance measured using MAPE, R², MAE, and RMSE on unseen test data.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">05</div>
                     <div class="method-text">
-                        <strong>30-Day Recursive Forecast</strong>
-                        <p>Deployed recursive multi-step forecasting where each day's prediction feeds back into the next. 95% confidence intervals provided for risk assessment across the full forecast horizon.</p>
+                        <strong>Forecasting</strong>
+                        <p>30-day recursive forecasting with confidence intervals for risk estimation.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -218,7 +225,7 @@
 
                 <div style="position:relative; background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:1.25rem; overflow:hidden;">
                     <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#38bdf8;"></div>
-                    <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#38bdf8; letter-spacing:0.08em; margin-bottom:0.6rem;">PHASE 01 · 2010–2020</div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#38bdf8; letter-spacing:0.08em; margin-bottom:0.6rem;">PHASE 01 · 2010-2020</div>
                     <div style="font-size:1rem; font-weight:600; color:#dde6f0; margin-bottom:0.5rem;">Stable Depreciation</div>
                     <div style="font-size:0.82rem; color:#7a93ab;">110 → 200 LKR/USD at ~6.2% annual depreciation rate. Gradual, predictable decline.</div>
                 </div>
@@ -232,9 +239,9 @@
 
                 <div style="position:relative; background:#0f1929; border:1px solid rgba(129,140,248,0.2); border-radius:10px; padding:1.25rem; overflow:hidden;">
                     <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#818cf8;"></div>
-                    <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#818cf8; letter-spacing:0.08em; margin-bottom:0.6rem;">PHASE 03 · 2023–2026</div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#818cf8; letter-spacing:0.08em; margin-bottom:0.6rem;">PHASE 03 · 2023-2026</div>
                     <div style="font-size:1rem; font-weight:600; color:#dde6f0; margin-bottom:0.5rem;">IMF Recovery</div>
-                    <div style="font-size:0.82rem; color:#7a93ab;">Stabilization at 300–310 LKR/USD following IMF intervention and structural adjustment programs.</div>
+                    <div style="font-size:0.82rem; color:#7a93ab;">Stabilization at 300-310 LKR/USD following IMF intervention and structural adjustment programs.</div>
                 </div>
 
             </div>
@@ -276,39 +283,41 @@
         <!-- Key Insights -->
         <section class="project-section">
             <h2 class="project-section-title">// Key Insights</h2>
+
             <div class="insights-grid">
+
                 <div class="insight-card">
                     <div class="insight-icon">🏆</div>
-                    <div class="insight-text">XGBoost achieved best performance (MAPE: 0.838%, R²: 0.904), outperforming industry benchmark.</div>
+                    <div class="insight-text">XGBoost achieved best performance (MAPE: 0.838%, R²: 0.904).</div>
                 </div>
 
                 <div class="insight-card">
                     <div class="insight-icon">📈</div>
-                    <div class="insight-text">XGBoost reduced MAPE by 29.5% compared to Random Forest, proving stronger for time-series forecasting.</div>
+                    <div class="insight-text">XGBoost reduced error by 29.5% vs Random Forest.</div>
                 </div>
 
                 <div class="insight-card">
                     <div class="insight-icon">🔗</div>
-                    <div class="insight-text">Lag_1, Lag_7, and MA_30 were key predictors, capturing short- and mid-term trends.</div>
+                    <div class="insight-text">Lag_1, Lag_7, and MA_30 were the strongest predictors.</div>
                 </div>
 
                 <div class="insight-card">
                     <div class="insight-icon">⚠️</div>
-                    <div class="insight-text">Errors peaked during the 2022 crisis (8-12 LKR), but XGBoost recovered fastest from shocks.</div>
+                    <div class="insight-text">Errors spiked during the 2022 crisis, but XGBoost recovered fastest.</div>
                 </div>
 
                 <div class="insight-card">
                     <div class="insight-icon">🌍</div>
-                    <div class="insight-text">USD dominance remains strong in global oil trade despite the post-2024 petrodollar shift.</div>
+                    <div class="insight-text">USD remains dominant in global trade despite recent shifts.</div>
                 </div>
 
                 <div class="insight-card">
                     <div class="insight-icon">💡</div>
-                    <div class="insight-text">Ensemble model (MAPE: 0.940%) is recommended for stable, low-overfitting production use.</div>
+                    <div class="insight-text">Ensemble model (MAPE: 0.94%) is recommended for production use.</div>
                 </div>
+
             </div>
         </section>
-
         <!-- Tech Stack -->
         <section class="project-section">
             <h2 class="project-section-title">// Technical Stack</h2>

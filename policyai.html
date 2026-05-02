@@ -82,88 +82,105 @@
 
         <section class="project-section">
             <h2 class="project-section-title">// Methodology</h2>
+
             <div class="method-steps">
+
                 <div class="method-step">
                     <div class="method-num">01</div>
                     <div class="method-text">
-                        <strong>Policy Input &amp; Text Extraction</strong>
-                        <p>Supports three input modes — file upload (PDF, DOCX, TXT, JSON), paste text, and built-in sample policies. Text extraction handles multiple formats using PyPDF2 and python-docx.</p>
+                        <strong>Data Input & Extraction</strong>
+                        <p>Supports PDF, DOCX, TXT, JSON, or pasted text using PyPDF2 and python-docx.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">02</div>
                     <div class="method-text">
-                        <strong>NLP Preprocessing &amp; TF-IDF Summarisation</strong>
-                        <p>Sentence tokenisation using NLTK, stopword removal, token filtering, and TF-IDF scoring to rank and extract the most meaningful sentences. BART transformer used as fallback if available.</p>
+                        <strong>Text Processing & Summarisation</strong>
+                        <p>NLTK preprocessing with TF-IDF scoring to extract key sentences; BART used as fallback.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">03</div>
                     <div class="method-text">
-                        <strong>Structured Section Extraction</strong>
-                        <p>Keyword-based scoring separates the summary into three structured sections: Main Goals, Key Measures &amp; Strategies, and Overall Direction — for clarity and usability.</p>
+                        <strong>Structured Extraction</strong>
+                        <p>Keyword scoring splits summaries into goals, measures, and overall direction.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">04</div>
                     <div class="method-text">
-                        <strong>Scenario Definition &amp; Generative Drafting</strong>
-                        <p>Users define custom scenarios or use pre-filled prompts. The structured summary is passed to llama3.2 via Ollama's local REST API, which generates a formal adapted policy draft per scenario.</p>
+                        <strong>Scenario-Based Generation</strong>
+                        <p>llama3.2 (Ollama) generates tailored policy drafts from scenario prompts.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">05</div>
                     <div class="method-text">
-                        <strong>Web Application &amp; Export</strong>
-                        <p>Dual-panel Streamlit interface: left panel for summarisation, right panel for scenario-based drafting. Supports multiple concurrent scenario slots, regeneration, and download of all outputs.</p>
+                        <strong>Web App & Export</strong>
+                        <p>Streamlit interface enables multi-scenario generation and report downloads.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section class="project-section">
             <h2 class="project-section-title">// Key Insights</h2>
             <div class="insights-grid">
-                <div class="insight-card"><div class="insight-icon">📄</div><div class="insight-text">TF-IDF extractive summarisation successfully reduced a 2,000+ word policy to a structured 3-section summary while preserving key legal and operational meaning.</div></div>
-                <div class="insight-card"><div class="insight-icon">🤖</div><div class="insight-text">llama3.2 via Ollama generated coherent, professional-tone policy drafts locally — requiring no cloud API, preserving data privacy, and enabling offline use.</div></div>
-                <div class="insight-card"><div class="insight-icon">🎯</div><div class="insight-text">Scenario-based prompting produced clearly differentiated outputs — the same policy adapted for passengers with disabilities vs. Canadian APPR compliance yielded structurally distinct drafts.</div></div>
-                <div class="insight-card"><div class="insight-icon">⚙️</div><div class="insight-text">Keyword scoring for section extraction (goals, measures, direction) proved effective as a lightweight alternative to fine-tuned classification models for structured document analysis.</div></div>
-                <div class="insight-card"><div class="insight-icon">🌐</div><div class="insight-text">The dual-panel interface allowed iterative exploration — users could modify scenarios, regenerate drafts, and download multi-scenario reports without restarting the workflow.</div></div>
-                <div class="insight-card"><div class="insight-icon">💡</div><div class="insight-text">The system demonstrates how AI tools can support policy communication — not by creating new legislation, but by adapting existing content for different audiences and regulatory contexts.</div></div>
-            </div>
+            <div class="insight-card"><div class="insight-icon">📄</div><div class="insight-text">TF-IDF summarisation reduced 2,000+ words into a structured 3-section summary.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">🤖</div><div class="insight-text">llama3.2 (Ollama) generated privacy-preserving, offline policy drafts.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">🎯</div><div class="insight-text">Scenario-based prompting produced distinct policy outputs for different contexts.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">⚙️</div><div class="insight-text">Keyword scoring effectively structured document sections without complex models.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">🌐</div><div class="insight-text">Interactive interface enabled iterative scenario editing and report generation.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">💡</div><div class="insight-text">AI adapts policy content for different audiences and regulatory contexts.</div></div>
         </section>
 
         <section class="project-section">
             <h2 class="project-section-title">// Tech Stack</h2>
+
             <div class="method-steps">
+
                 <div class="method-step">
                     <div class="method-num">🐍</div>
                     <div class="method-text">
-                        <strong>Python &amp; Streamlit</strong>
-                        <p>Core application framework. Streamlit handles the dual-panel UI, session state management, file uploads, and interactive controls without requiring a separate frontend.</p>
+                        <strong>Python & Streamlit</strong>
+                        <p>Core framework for UI, file handling, and app logic.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">📝</div>
                     <div class="method-text">
-                        <strong>NLTK &amp; TF-IDF</strong>
-                        <p>Natural Language Toolkit for sentence tokenisation and stopword removal. Custom TF-IDF implementation scores and ranks sentences for extractive summarisation.</p>
+                        <strong>NLTK & TF-IDF</strong>
+                        <p>Used for text preprocessing and extractive summarisation.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">🦙</div>
                     <div class="method-text">
                         <strong>Ollama + llama3.2</strong>
-                        <p>Locally hosted large language model accessed via REST API on localhost:11434. Generates scenario-adapted policy drafts with structured prompts using professional policy language.</p>
+                        <p>Local LLM for scenario-based policy draft generation.</p>
                     </div>
                 </div>
+
                 <div class="method-step">
                     <div class="method-num">📦</div>
                     <div class="method-text">
-                        <strong>PyPDF2 &amp; python-docx</strong>
-                        <p>Document parsing libraries for extracting raw text from uploaded PDF and DOCX files, enabling the system to work with real-world policy documents in any common format.</p>
+                        <strong>PyPDF2 & python-docx</strong>
+                        <p>Extract text from PDF and DOCX policy documents.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 

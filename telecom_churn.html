@@ -59,7 +59,7 @@
 
         <section class="project-section">
             <h2 class="project-section-title">// Project Overview</h2>
-            <p>This research paper addresses early customer churn — customers who leave within the first three months of subscription — using a hybrid of supervised machine learning and KMeans customer segmentation. Four ML models were compared, with LightGBM emerging as the top performer. SHAP values were used for model explainability, and threshold optimization was applied to maximize business cost savings.</p>
+            <p>This research paper addresses early customer churn - customers who leave within the first three months of subscription - using a hybrid of supervised machine learning and KMeans customer segmentation. Four ML models were compared, with LightGBM emerging as the top performer. SHAP values were used for model explainability, and threshold optimization was applied to maximize business cost savings.</p>
             <div class="team-row">
                 <span class="team-label">Team:</span>
                 <span class="team-members">WACI Abeysekara &nbsp;·&nbsp; RL Hewanayaka &nbsp;·&nbsp; MZM Hussein &nbsp;·&nbsp; MN Mohamed</span>
@@ -167,12 +167,17 @@
         <section class="project-section">
             <h2 class="project-section-title">// Key Insights</h2>
             <div class="insights-grid">
-                <div class="insight-card"><div class="insight-icon">🏆</div><div class="insight-text">LightGBM achieved the best overall performance with ROC-AUC of 0.995 and F1-score of 0.97, outperforming all other models including XGBoost and Random Forest.</div></div>
-                <div class="insight-card"><div class="insight-icon">⚙️</div><div class="insight-text">Threshold optimization at 0.236 (vs default 0.5) saved $14,550 in misclassification costs by maximizing recall of early churners while minimizing false positives.</div></div>
-                <div class="insight-card"><div class="insight-icon">📊</div><div class="insight-text">SHAP analysis revealed tenure, monthly charges, and contract type as the top 3 churn drivers — shorter tenure and higher monthly bills strongly predicted early exit.</div></div>
-                <div class="insight-card"><div class="insight-icon">👥</div><div class="insight-text">KMeans clustering identified 3 distinct churn segments: Price-Sensitive, Low-Engagement, and Onboarding Failure — each requiring different targeted retention strategies.</div></div>
-                <div class="insight-card"><div class="insight-icon">💸</div><div class="insight-text">The Onboarding Failure segment showed the highest revenue loss risk — high-spending customers churning very early, often due to poor onboarding experiences.</div></div>
-                <div class="insight-card"><div class="insight-icon">✅</div><div class="insight-text">5-fold cross-validation confirmed model robustness with a mean ROC-AUC of 0.996 (std: 0.0013), demonstrating strong generalizability on unseen data.</div></div>
+            <div class="insight-card"><div class="insight-icon">🏆</div><div class="insight-text">LightGBM achieved best performance (ROC-AUC 0.995, F1 0.97), outperforming XGBoost and Random Forest.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">⚙️</div><div class="insight-text">Threshold tuning at 0.236 reduced misclassification cost by $14,550 by improving churn detection.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">📊</div><div class="insight-text">SHAP identified tenure, monthly charges, and contract type as top churn drivers.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">👥</div><div class="insight-text">KMeans found 3 churn groups: Price-Sensitive, Low-Engagement, and Onboarding Failure.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">💸</div><div class="insight-text">Onboarding Failure segment had highest revenue loss due to early churn of high-value customers.</div></div>
+
+            <div class="insight-card"><div class="insight-icon">✅</div><div class="insight-text">5-fold cross-validation confirmed stability with ROC-AUC 0.996 ± 0.0013.</div></div>
             </div>
         </section>
 
