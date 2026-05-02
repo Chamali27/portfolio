@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Behavior & Patient Outcomes | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-hero-tags">
+                <span class="tag">R</span>
+                <span class="tag">Data Mining</span>
+                <span class="tag">Association Rule Mining</span>
+                <span class="tag">Logistic Regression</span>
+                <span class="tag">Healthcare &amp; Retail</span>
+                <span class="tag">Group Project</span>
+            </div>
+            <h1>Consumer Behavior &amp; Patient Outcomes Analysis</h1>
+            <p class="project-hero-sub">
+                A dual-domain data mining project combining Association Rule Mining (ARM) for retail insights
+                and Logistic Regression for predicting hospital readmissions in healthcare.
+            </p>
+        </div>
+    </div>
+
+    <div class="stats-strip">
+        <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Domains Covered</div></div>
+        <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Models Used</div></div>
+        <div class="stat-item"><div class="stat-num">10+ yrs</div><div class="stat-label">Patient Data</div></div>
+        <div class="stat-item"><div class="stat-num">100K+</div><div class="stat-label">Transactions</div></div>
+    </div>
+
+    <div class="project-body">
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Project Overview</h2>
+            <p>This project explores how data mining techniques can be applied across two different industries. Association Rule Mining (ARM) was used to analyze online retail transactions and identify product purchase patterns, while Logistic Regression was applied to healthcare data to predict patient readmission within 30 days. Both analyses were implemented in R, combining statistical rigor with practical business and clinical applications.</p>
+            <div class="team-row">
+                <span class="team-label">Team:</span>
+                <span class="team-members">WACI Abeysekara &nbsp;·&nbsp; RL Hewanayaka &nbsp;·&nbsp; MZM Hussein &nbsp;·&nbsp; MN Mohamed</span>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Questions Explored</h2>
+            <div class="questions-grid">
+                <div class="question-card">What product combinations are frequently purchased together?</div>
+                <div class="question-card">How can ARM support marketing and product bundling strategies?</div>
+                <div class="question-card">Can logistic regression reliably predict patient readmission?</div>
+                <div class="question-card">Which factors most influence hospital readmission risk?</div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Methodology</h2>
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="method-num">01</div>
+                    <div class="method-text">
+                        <strong>Data Preparation</strong>
+                        <p>Cleaned retail and healthcare datasets, removed missing values, handled outliers, and engineered relevant variables for modelling.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">02</div>
+                    <div class="method-text">
+                        <strong>Association Rule Mining</strong>
+                        <p>Applied the Apriori algorithm to retail transaction data using support, confidence, and lift thresholds to discover meaningful product purchase patterns.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">03</div>
+                    <div class="method-text">
+                        <strong>Logistic Regression</strong>
+                        <p>Built a binary classification model on 10+ years of patient records to predict the likelihood of 30-day hospital readmission.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">04</div>
+                    <div class="method-text">
+                        <strong>Model Evaluation</strong>
+                        <p>Assessed performance using confusion matrix, ROC curve, and AUC score, identifying areas limited by class imbalance in the data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card"><div class="insight-icon">🛒</div><div class="insight-text">Strong product associations were identified across retail transactions, enabling targeted cross-selling strategies.</div></div>
+                <div class="insight-card"><div class="insight-icon">📦</div><div class="insight-text">ARM results can directly optimize product placement, promotions, and bundling decisions in retail operations.</div></div>
+                <div class="insight-card"><div class="insight-icon">🏥</div><div class="insight-text">Logistic regression successfully identified high-risk readmission patients based on key clinical variables.</div></div>
+                <div class="insight-card"><div class="insight-icon">📊</div><div class="insight-text">Model evaluation highlighted limitations introduced by class imbalance in the healthcare dataset.</div></div>
+                <div class="insight-card"><div class="insight-icon">⚠️</div><div class="insight-text">Confusion matrix analysis revealed that poor class balance significantly impacted classification accuracy.</div></div>
+                <div class="insight-card"><div class="insight-icon">💡</div><div class="insight-text">Combining ARM and logistic regression demonstrates the versatility of data mining methods across multiple industries.</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// GitHub Repository</h2>
+            <a href="https://github.com/Chamali27/ARM-Logistic-Regression-project.git" class="github-btn" target="_blank">
+                ⌥ View Project on GitHub →
+            </a>
+        </section>
+
+        <a href="index.html#projects" class="btn btn-primary" style="margin-top:1rem;">← Back to Projects</a>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.insight-card, .question-card');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    cards.forEach(c => obs.observe(c));
+</script>
+
+
+
+
+</body>
+</html>

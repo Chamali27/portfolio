@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADScAI Conference 2026 | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Hero -->
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <a href="index.html#achievements" class="back-btn" style="margin-bottom:1.5rem; display:inline-flex;">← Back to Portfolio</a>
+            <div class="project-hero-tags">
+                <span class="tag">Research Paper</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">University of Moratuwa</span>
+                <span class="tag">April 2026</span>
+            </div>
+            <h1>🎓 ADScAI Conference 2026  Research Presentation</h1>
+            <p class="project-hero-sub">
+                Published and presented original research on <strong style="color:var(--accent);">Predicting USD/LKR Exchange Rates</strong> at the Applied Data Science &amp; Artificial Intelligence Conference (ADScAI 2026), organised by the Department of Computer Science &amp; Engineering, University of Moratuwa. The paper was selected through a competitive review process, and presented on conference day - 29 April 2026. Also received a Certificate of Participation for the workshop on 28 April 2026.
+            </p>
+
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:1.5rem;">
+                <span class="project-stat">📄 Research Paper Selected</span>
+                <span class="project-stat">Predicting USD/LKR</span>
+                <span class="project-stat">University of Moratuwa</span>
+                <span class="project-stat">28–29 April 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="project-section">
+        <div class="project-section-title" style="text-align:center;">// gallery</div>
+        <div class="masonry-gallery">
+            <img src="adscai02.jpeg" alt="ADScAI 2026 Conference" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="adscai01.jpeg" alt="ADScAI 2026 Conference" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="adscai03.jpeg" alt="ADScAI 2026 Conference" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+    </div>
+
+    <a href="index.html#achievements" class="back-btn">← Back to Portfolio</a>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+function openZoom(src) {
+    const lb = document.getElementById('zoom-overlay');
+    document.getElementById('zoom-img').src = src;
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function closeZoom() {
+    document.getElementById('zoom-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeZoom(); });
+const hamburger = document.getElementById('hamburger');
+const navList = document.querySelector('.nav-list');
+hamburger?.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    hamburger.classList.toggle('active');
+});
+</script>
+
+<!-- Zoom Lightbox -->
+<div id="zoom-overlay" onclick="closeZoom()" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(4,8,16,0.96); align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(10px);">
+    <img id="zoom-img" src="" alt="" style="max-width:90vw; max-height:90vh; border-radius:12px; border:1px solid rgba(56,189,248,0.25); object-fit:contain; display:block;">
+    <div style="position:fixed; bottom:24px; left:0; right:0; text-align:center; font-family:'Space Mono',monospace; font-size:0.62rem; color:rgba(56,189,248,0.4);">ESC or click to close</div>
+</div>
+
+</body>
+</html>
