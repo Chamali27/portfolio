@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester Energy Performance Analysis | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-hero-tags">
+                <span class="tag">SQL Server</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Group Project</span>
+            </div>
+            <h1>Manchester Energy Performance Analysis</h1>
+            <p class="project-hero-sub">
+                A data-driven analysis of residential energy efficiency, CO₂ emissions, and costs using UK EPC data (2006–2025).
+            </p>
+        </div>
+    </div>
+
+    <div class="stats-strip">
+        <div class="stat-item"><div class="stat-num">300K+</div><div class="stat-label">EPC Records</div></div>
+        <div class="stat-item"><div class="stat-num">1M+</div><div class="stat-label">Recommendations</div></div>
+        <div class="stat-item"><div class="stat-num">2006–25</div><div class="stat-label">Data Range</div></div>
+        <div class="stat-item"><div class="stat-num">70%</div><div class="stat-label">Heating Cost Share</div></div>
+    </div>
+
+    <div class="project-body">
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Project Overview</h2>
+            <p>This project analyzes residential Energy Performance Certificate (EPC) data in Manchester to evaluate energy efficiency, CO₂ emissions, and energy costs. SQL Server was used for data cleaning and transformation, while Power BI dashboards were built to explore patterns across property types, energy ratings, and costs.</p>
+            <div class="team-row">
+                <span class="team-label">Team:</span>
+                <span class="team-members">WACI Abeysekara &nbsp;·&nbsp; RL Hewanayaka &nbsp;·&nbsp; MZM Hussein &nbsp;·&nbsp; MN Mohamed</span>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Questions Explored</h2>
+            <div class="questions-grid">
+                <div class="question-card">Which property types have the highest energy costs and emissions?</div>
+                <div class="question-card">How do EPC ratings vary across Manchester properties?</div>
+                <div class="question-card">What factors influence energy efficiency (walls, roofs, fuel types)?</div>
+                <div class="question-card">What improvements can reduce costs and carbon emissions?</div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Methodology</h2>
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="method-num">01</div>
+                    <div class="method-text">
+                        <strong>Data Collection</strong>
+                        <p>Collected UK EPC data (2006–2025) filtered for Manchester properties from official government datasets.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">02</div>
+                    <div class="method-text">
+                        <strong>Data Cleaning</strong>
+                        <p>Processed in SQL Server, removed duplicates, handled missing values, and created structured views for analysis.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">03</div>
+                    <div class="method-text">
+                        <strong>Data Modelling</strong>
+                        <p>Built Power BI data model and created DAX measures for KPIs such as energy costs, CO₂ emissions, and efficiency ratings.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">04</div>
+                    <div class="method-text">
+                        <strong>Dashboard Development</strong>
+                        <p>Designed interactive dashboards with slicers for property type, tenure, and energy rating to support exploration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card"><div class="insight-icon">🔥</div><div class="insight-text">Heating accounts for approximately 70% of total energy costs, making it the single biggest cost driver.</div></div>
+                <div class="insight-card"><div class="insight-icon">🏠</div><div class="insight-text">Mid-terrace properties and cavity walls significantly impact overall energy consumption patterns.</div></div>
+                <div class="insight-card"><div class="insight-icon">🌍</div><div class="insight-text">Flats generally show lower CO₂ emissions compared to detached and semi-detached houses.</div></div>
+                <div class="insight-card"><div class="insight-icon">⚡</div><div class="insight-text">Most properties fall under EPC ratings C and D, indicating strong potential for efficiency improvements.</div></div>
+                <div class="insight-card"><div class="insight-icon">☀️</div><div class="insight-text">Solar panels and heating system upgrades provide the most significant cost and emission reductions.</div></div>
+                <div class="insight-card"><div class="insight-icon">📊</div><div class="insight-text">Over 1M+ improvement recommendations highlight widespread opportunities for sustainability gains.</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Dashboards</h2>
+            <img src="01.png" class="project-dashboard" alt="Energy Dashboard 1">
+            <img src="02.png" class="project-dashboard" alt="Energy Dashboard 2">
+            <img src="03.png" class="project-dashboard" alt="Energy Dashboard 3">
+            <img src="04.png" class="project-dashboard" alt="Energy Dashboard 4">
+            <img src="05.png" class="project-dashboard" alt="Energy Dashboard 5">
+            <img src="06.png" class="project-dashboard" alt="Energy Dashboard 6">
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// GitHub Repository</h2>
+            <a href="https://github.com/Chamali27/manchester-epc-energy-performance-analysis.git" class="github-btn" target="_blank">
+                ⌥ View Project on GitHub →
+            </a>
+        </section>
+
+        <a href="index.html#projects" class="btn btn-primary" style="margin-top:1rem;">← Back to Projects</a>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.insight-card, .question-card');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    cards.forEach(c => obs.observe(c));
+</script>
+
+</body>
+</html>

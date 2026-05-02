@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamali Abeysekara | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── Rotating title ── */
+        .rotating-title {
+            display: inline-block;
+            position: relative;
+            height: 1.4em;
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+        .rotating-title .rt-inner {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.55s cubic-bezier(0.77,0,0.175,1);
+        }
+        .rotating-title .rt-item {
+            display: block;
+            white-space: nowrap;
+            height: 1.4em;
+            line-height: 1.4em;
+        }
+
+        /* Hero rotating title – larger */
+        .hero-rotating {
+            display: inline-block;
+            position: relative;
+            height: 1.4em;
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+        .hero-rotating .rt-inner {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.55s cubic-bezier(0.77,0,0.175,1);
+        }
+        .hero-rotating .rt-item {
+            display: block;
+            white-space: nowrap;
+            height: 1.4em;
+            line-height: 1.4em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══ INTRO SCREEN ═══ -->
+<div class="intro-screen" id="introScreen">
+    <canvas class="intro-canvas" id="introCanvas"></canvas>
+
+    <div class="intro-inner">
+        <div class="intro-boot" id="introBoot">
+            <div class="boot-line" style="--d:0.0s">Initializing portfolio<span class="boot-dots">...</span></div>
+            <div class="boot-line" style="--d:0.6s">Loading data projects<span class="boot-dots">...</span></div>
+            <div class="boot-line" style="--d:1.2s">Connecting to insights<span class="boot-dots">...</span></div>
+            <div class="boot-line" style="--d:1.8s">Rendering dashboards<span class="boot-dots">...</span></div>
+            <div class="boot-line boot-ok" style="--d:2.4s">✓ All systems ready</div>
+        </div>
+
+        <div class="intro-main" id="introMain">
+            <div class="intro-tag">◈ Welcome to my portfolio</div>
+            <h1 class="intro-name">
+                <span class="intro-name-line">Chamali</span>
+                <span class="intro-name-line">Abeysekara</span>
+            </h1>
+
+            <div class="intro-pills">
+                <span>SQL</span><span>Power BI</span><span>Python</span><span>ML</span>
+            </div>
+            <button class="intro-enter" id="introEnter">
+                <span class="enter-text">Explore Portfolio</span>
+                <span class="enter-arrow">→</span>
+            </button>
+            <p class="intro-hint">or press any key</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="#home" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <section id="home" class="section hero">
+        <div class="hero-grid-accent" aria-hidden="true">
+            <div class="hero-data-stream">
+                <span>SELECT * FROM insights</span>
+                <span>WHERE value > threshold</span>
+                <span>GROUP BY pattern</span>
+                <span>ORDER BY impact DESC</span>
+                <span>ANALYZE TABLE trends</span>
+                <span>JOIN ON correlation</span>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="eyebrow-dot"></span>
+                <span>Available for opportunities</span>
+            </div>
+            <div class="hero-img-wrap">
+                <div class="hero-img-frame">
+                    <img src="Chamali1.jpeg" alt="Chamali Abeysekara" class="profile-img">
+                    <div class="img-scan-line" aria-hidden="true"></div>
+                </div>
+                <div class="img-stat-pill img-stat-1">
+                    <span class="pill-num">10+</span>
+                    <span>Projects</span>
+                </div>
+                <div class="img-stat-pill img-stat-2">
+                    <span class="pill-num">100M+</span>
+                    <span>Records</span>
+                </div>
+            </div>
+            <div class="hero-text-block">
+                <div class="hero-badge">
+                    <!-- ROTATING BADGE in hero -->
+                    <span class="badge-icon">◈</span>
+                    <span class="hero-rotating" id="heroRotating">
+                        <span class="rt-inner" id="heroRtInner">
+                            <span class="rt-item">Aspiring Data Analyst</span>
+                            <span class="rt-item">Lifelong Learner</span>
+                            <span class="rt-item">Data Analytics Enthusiast</span>
+                          
+                        </span>
+                    </span>
+                </div>
+                <h1>Hi, I'm <br><em class="highlight">Chamali<br>Abeysekara</em></h1>
+                <p class="hero-subtitle">SQL · Power BI · Python · Machine Learning</p>
+                <p class="hero-text">
+                    Transforming data into meaningful insights through analysis, visualization, and machine learning.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="Chamali Abeysekara.pdf" class="btn btn-secondary" download>
+                        <span>↓</span> Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-strip">
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="10" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="100" data-suffix="M+">0</div>
+            <div class="stat-label">Records Analyzed</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num counter" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Tools &amp; Platforms</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">2006–25</div>
+            <div class="stat-label">Data Time Range</div>
+        </div>
+    </div>
+
+    <section id="about" class="section">
+        <div class="section-header">
+            <span class="section-tag">// about_me.sql</span>
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I am an Applied Data Science undergraduate with hands-on experience in SQL, Power BI, and data-driven projects. I enjoy exploring data to uncover patterns, solve problems, and support informed decision-making.</p>
+                <p>Through my projects, I have gained practical experience in data cleaning, visualization, and reporting, working with large datasets to extract actionable insights. I am eager to grow in a professional environment and contribute to impactful, data-driven solutions.</p>
+                <p>I am also an active member of <strong>Toastmasters International</strong>, where I continuously develop my public speaking, leadership, and communication skills.</p>
+            </div>
+            <div class="about-terminal">
+                <div class="terminal-bar">
+                    <span class="t-dot t-red"></span>
+                    <span class="t-dot t-yellow"></span>
+                    <span class="t-dot t-green"></span>
+                    <span class="t-title">profile.py</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="t-line"><span class="t-kw">name</span> <span class="t-op">=</span> <span class="t-str">"Chamali Abeysekara"</span></div>
+                    <div class="t-line"><span class="t-kw">role</span> <span class="t-op">=</span> <span class="t-str">"Aspiring Data Analyst"</span></div>
+                    <div class="t-line"><span class="t-kw">tools</span> <span class="t-op">=</span> [<span class="t-str">"SQL"</span>, <span class="t-str">"Power BI"</span>, <span class="t-str">"Python"</span>]</div>
+                    <div class="t-line"><span class="t-kw">ml_skills</span> <span class="t-op">=</span> [<span class="t-str">"LightGBM"</span>, <span class="t-str">"XGBoost"</span>, <span class="t-str">"SHAP"</span>]</div>
+                    <div class="t-line"><span class="t-kw">records_analyzed</span> <span class="t-op">=</span> <span class="t-num">100_000_000+</span></div>
+                    <div class="t-line"><span class="t-kw">projects</span> <span class="t-op">=</span> <span class="t-num">10+</span></div>
+                    <div class="t-line t-comment"># Always learning, always growing</div>
+                    <div class="t-line"><span class="t-cursor">▋</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+        <div class="section-header">
+            <span class="section-tag">// skills.json</span>
+            <h2 class="section-title">Skills</h2>
+        </div>
+        <div class="skills-table">
+            <div class="skills-row">
+                <div class="skills-category">Data &amp; Analytics</div>
+                <div class="skills-items">
+                    <span>SQL</span><span>Power BI</span><span>Data Analysis</span>
+                    <span>Data Visualization</span><span>DAX</span><span>Data Cleaning</span>
+                </div>
+            </div>
+            <div class="skills-row">
+                <div class="skills-category">Programming</div>
+                <div class="skills-items">
+                    <span>Python</span><span>SQL</span><span>R</span><span>HTML</span><span>CSS</span>
+                </div>
+            </div>
+            <div class="skills-row">
+                <div class="skills-category">ML &amp; Libraries</div>
+                <div class="skills-items">
+                    <span>Scikit-learn</span><span>LightGBM</span><span>XGBoost</span>
+                    <span>SHAP</span><span>SMOTE</span><span>Prophet</span><span>KMeans</span>
+                </div>
+            </div>
+            <div class="skills-row">
+                <div class="skills-category">Tools &amp; Platforms</div>
+                <div class="skills-items">
+                    <span>Power BI Desktop</span><span>SQL Server</span><span>GitHub</span>
+                    <span>Excel</span><span>Streamlit</span><span>Jupyter Notebook</span>
+                </div>
+            </div>
+            <div class="skills-row">
+                <div class="skills-category">Soft Skills</div>
+                <div class="skills-items">
+                    <span>Communication</span><span>Public Speaking</span><span>Teamwork</span>
+                    <span>Problem Solving</span><span>Project Management</span><span>Leadership</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-header">
+            <span class="section-tag">// SELECT * FROM projects</span>
+            <h2 class="section-title">Projects</h2>
+        </div>
+        <div class="projects-grid">
+
+            <a href="uk_visa.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">01</div>
+                    <h3>UK Study &amp; Work Visa Analysis</h3>
+                    <p>Analyzed UK visa application data (2010–2024) using SQL and Power BI to identify trends, nationality patterns, approval outcomes, and key data-driven insights.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">5M+ Study Applications</span>
+                        <span class="project-stat">2M+ Work Applications</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">SQL Server</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+
+            <a href="flight_analysis.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">02</div>
+                    <h3>U.S. Flight Arrival Performance</h3>
+                    <p>Analyzed 100M+ US flight records from 2010–2025 using SQL and Power BI to uncover delay trends, root causes, and airport-level performance insights.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">102M+ Flights</span>
+                        <span class="project-stat">20M+ Delay hrs</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Data Analysis</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+
+            <a href="tourism.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">03</div>
+                    <h3>Sri Lanka Tourism Analysis</h3>
+                    <p>Analyzed tourism recovery trends (2020–2025) using Power BI to identify growth patterns, key source markets, and seasonal demand insights.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">7M+ Arrivals</span>
+                        <span class="project-stat">270% Growth</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">Data Analysis</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+
+            <a href="road_accident_severity.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">04</div>
+                    <h3>Road Accident Severity Prediction</h3>
+                    <p>Predicted accident severity using Logistic Regression and Random Forest on 7.7M+ US accident records with environmental and road condition features.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">~80% Accuracy</span>
+                        <span class="project-stat">Random Forest</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Python</span><span class="tag">Machine Learning</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+
+            <a href="energy_performance_manchester.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">05</div>
+                    <h3>Manchester Energy Performance</h3>
+                    <p>Analyzed EPC data using SQL Server and Power BI to evaluate energy efficiency, CO₂ emissions, and costs for sustainability improvements, enabling decision-making.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">300K+ Properties</span>
+                        <span class="project-stat">2006–2024</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">SQL Server</span><span class="tag">Power BI</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+
+            <a href="sdg_analytics.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">06</div>
+                    <h3>Sustainable Development Goals Data Analytics</h3>
+                    <p>Analyzed global SDG data using SQL Server and Power BI to monitor country-level progress and track trends in poverty, health, and climate indicators.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">Global Dataset</span>
+                        <span class="project-stat">17 SDG Goals</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">SQL Server</span><span class="tag">Power BI</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+
+            <a href="telecom_churn.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">08</div>
+                    <h3>Telecom Churn Prediction</h3>
+                    <p>Built a machine learning model to predict early customer churn. LightGBM achieved top performance with strong business insights using SHAP and threshold optimization.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">7,043 Customers</span>
+                        <span class="project-stat">0.995 ROC-AUC</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Python</span><span class="tag">LightGBM</span><span class="tag">SHAP</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+
+            <a href="arm-logistic-regression.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">09</div>
+                    <h3>Consumer Behavior &amp; Patient Outcomes</h3>
+                    <p>Applied Association Rule Mining and Logistic Regression to analyze retail purchasing patterns and predict hospital readmission risks.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">2 Domains</span>
+                        <span class="project-stat">ARM + ML</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">R</span><span class="tag">Apriori</span><span class="tag">Logistic Regression</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>            
+
+            <a href="ev_adoption.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">10</div>
+                    <h3>Global Electric Vehicle Adoption Analysis</h3>
+                    <p>Developed a global model analyzing environmental & economic impacts of EV adoption, showing 5M+ tons of CO₂ savings & forecasting scenarios to 2030 with key policy insights.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">5M+ Tons CO₂</span>
+                        <span class="project-stat">1.95 Tons/EV</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Python</span><span class="tag">Prophet</span><span class="tag">XGBoost</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+            <a href="olympicgames.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">07</div>
+                    <h3>Summer and Winter Olympic Games Data Analysis</h3>
+                    <p>Analyzed all-time Olympic medal data using Power BI to compare country performance, medal distribution, and participation trends across different years and events.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">100+ Countries</span>
+                        <span class="project-stat">All-Time Data</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">Data Visualization</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>
+            <a href="policyai.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">11</div>
+                    <h3>PolicyAI - NLP Policy Summarisation &amp; Generative Drafting</h3>
+                    <p>A web-based AI system that summarises real-world policy documents using TF-IDF NLP and generates scenario-adapted policy drafts using llama3.2 via Ollama.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">TF-IDF + LLM</span>
+                        <span class="project-stat">llama3.2 · Ollama</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">NLP</span><span class="tag">Ollama</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>       
+            
+            
+            <a href="usdlkr-project.html" class="project-card-link">
+                <article class="project-card">
+                    <div class="card-index">12</div>
+                    <h3>USD/LKR Exchange Rate Prediction</h3>
+                    <p>Forecasted LKR/USD exchange rates using the CRISP-DM framework with XGBoost, Random Forest, and Gradient Boosting on 16 years of Central Bank data, with 30-day forward predictions and dollar dominance analysis.</p>
+                    <div class="project-meta">
+                        <span class="project-stat">0.838% MAPE</span>
+                        <span class="project-stat">XGBoost</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">CRISP-DM</span>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </article>
+            </a>            
+
+        </div>
+    </section>
+
+<section id="achievements" class="section section-alt">
+    <div class="section-header">
+        <span class="section-tag">// achievements.log</span>
+        <h2 class="section-title">Achievements &amp; Leadership</h2>
+    </div>
+
+    <div style="position:relative; padding-left:28px;">
+        <div style="position:absolute; left:6px; top:6px; bottom:6px; width:1px; background:linear-gradient(to bottom, rgba(56,189,248,0.5), rgba(56,189,248,0.05));"></div>
+        <!-- Item 5 - ADScAI Conference 2026 -->
+        <div style="position:relative; margin-bottom:20px;">
+            <div style="position:absolute; left:-25px; top:4px; width:13px; height:13px; border-radius:50%; border:2px solid #f5c842; background:#0b1221; display:flex; align-items:center; justify-content:center;">
+                <div style="width:5px; height:5px; border-radius:50%; background:#f5c842;"></div>
+            </div>
+            <a href="adscai.html" style="text-decoration:none;">
+                <div style="padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:8px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(245,200,66,0.3)'" onmouseout="this.style.borderColor='rgba(56,189,248,0.1)'">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:5px;">
+                        <div style="font-size:0.88rem; font-weight:600; color:#f5c842;">Research Presenter - ADScAI conference 2026</div>
+                        <span style="font-family:'Space Mono',monospace; font-size:0.6rem; padding:2px 8px; border-radius:20px; white-space:nowrap; flex-shrink:0; color:#f5c842; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.2);">Apr 2026</span>
+                    </div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.78rem; color:#7a93ab;">Predicting USD/LKR Exchange Rates · University of Moratuwa</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item 2 - VP DatAInspire -->
+        <div style="position:relative; margin-bottom:20px;">
+            <div style="position:absolute; left:-25px; top:4px; width:13px; height:13px; border-radius:50%; border:2px solid #38bdf8; background:#0b1221; display:flex; align-items:center; justify-content:center;">
+                <div style="width:5px; height:5px; border-radius:50%; background:#38bdf8;"></div>
+            </div>
+            <a href="vp-datainspire.html" style="text-decoration:none;">
+                <div style="padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:8px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.3)'" onmouseout="this.style.borderColor='rgba(56,189,248,0.1)'">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:5px;">
+                        <div style="font-size:0.88rem; font-weight:600; color:#dde6f0;">Vice President - DatAInspire KDU</div>
+                        <span style="font-family:'Space Mono',monospace; font-size:0.6rem; padding:2px 8px; border-radius:20px; white-space:nowrap; flex-shrink:0; color:#38bdf8; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.2);">Jan 2025 – Jan 2026</span>
+                    </div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.78rem; color:#7a93ab;">Led AI & Data Science Club · Workshops · Technical Sessions </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item 1 - Data Odyssey -->
+        <div style="position:relative; margin-bottom:20px;">
+            <div style="position:absolute; left:-25px; top:4px; width:13px; height:13px; border-radius:50%; border:2px solid #fbbf24; background:#0b1221; display:flex; align-items:center; justify-content:center;">
+                <div style="width:5px; height:5px; border-radius:50%; background:#fbbf24;"></div>
+            </div>
+            <a href="data_odyssey.html" style="text-decoration:none;">
+                <div style="padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:8px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(251,191,36,0.3)'" onmouseout="this.style.borderColor='rgba(56,189,248,0.1)'">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:5px;">
+                        <div style="font-size:0.88rem; font-weight:600; color:#fbbf24;">First Place - Data Odyssey 2025</div>
+                        <span style="font-family:'Space Mono',monospace; font-size:0.6rem; padding:2px 8px; border-radius:20px; white-space:nowrap; flex-shrink:0; color:#fbbf24; background:rgba(251,191,36,0.08); border:1px solid rgba(251,191,36,0.2);">Oct 2025</span>
+                    </div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.78rem; color:#7a93ab;">Built Cart Connect · Association Rule Mining · DatAInspire KDU</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item 3 - Batch Representative -->
+        <div style="position:relative; margin-bottom:20px;">
+            <div style="position:absolute; left:-25px; top:4px; width:13px; height:13px; border-radius:50%; border:2px solid #818cf8; background:#0b1221; display:flex; align-items:center; justify-content:center;">
+                <div style="width:5px; height:5px; border-radius:50%; background:#818cf8;"></div>
+            </div>
+            <a href="batch_representative.html" style="text-decoration:none;">
+                <div style="padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:8px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(129,140,248,0.3)'" onmouseout="this.style.borderColor='rgba(56,189,248,0.1)'">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:5px;">
+                        <div style="font-size:0.88rem; font-weight:600; color:#dde6f0;">Batch Representative - Semester 03</div>
+                        <span style="font-family:'Space Mono',monospace; font-size:0.6rem; padding:2px 8px; border-radius:20px; white-space:nowrap; flex-shrink:0; color:#818cf8; background:rgba(129,140,248,0.08); border:1px solid rgba(129,140,248,0.2);">2025</span>
+                    </div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.78rem; color:#7a93ab;">BSc Applied Data Science Communication · KDU</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Item 4 - ARF HDUCIM 2025 -->
+        <div style="position:relative; margin-bottom:20px;">
+            <div style="position:absolute; left:-25px; top:4px; width:13px; height:13px; border-radius:50%; border:2px solid #f5c842; background:#0b1221; display:flex; align-items:center; justify-content:center;">
+                <div style="width:5px; height:5px; border-radius:50%; background:#f5c842;"></div>
+            </div>
+            <a href="arforum.html" style="text-decoration:none;">
+                <div style="padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:8px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(245,200,66,0.3)'" onmouseout="this.style.borderColor='rgba(56,189,248,0.1)'">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:5px;">
+                        <div style="font-size:0.88rem; font-weight:600; color:#f5c842;">ARF HDUCIM 2025 - Volunteer</div>
+                        <span style="font-family:'Space Mono',monospace; font-size:0.6rem; padding:2px 8px; border-radius:20px; white-space:nowrap; flex-shrink:0; color:#f5c842; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.2);">Jan 2025</span>
+                    </div>
+                    <div style="font-family:'Space Mono',monospace; font-size:0.78rem; color:#7a93ab;">26th ASEAN Regional Forum · Heads of Defence Universities · Galle Face Hotel</div>
+                </div>
+            </a>
+        </div>
+
+    </div><!-- end timeline -->
+
+    <!-- Divider -->
+    <div style="border:none; border-top:1px solid rgba(56,189,248,0.08); margin:36px 0;"></div>
+
+    <!-- Certifications -->
+    <span class="section-tag">// certifications.log</span>
+    <h3 style="font-family:'DM Sans',sans-serif; font-size:1.6rem; font-weight:600; color:#dde6f0; letter-spacing:-0.02em; margin-bottom:24px; margin-top:6px;">Certifications</h3>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:14px;">
+
+        
+            <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;"> 
+                <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#f5c842;"></div>
+                <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('ADSCAIconference.jpeg')">
+                    <img src="ADSCAIconference.jpeg" alt="ADScAI Conference" style="width:300px; height:100px; border-radius:10px; object-fit:contain; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">Research Presentation — ADScAI 2026</div>
+                <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">Predicting USD/LKR · University of Moratuwa</div>
+                <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">29 April 2026</div>
+                <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#f5c842; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.2);">✓ Presented</span>
+            </div>
+        </a>
+
+      
+            <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;">
+                <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#f97316;"></div>
+                <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('adscai.jpeg')">
+                    <img src="adscai.jpeg" alt="ADScAI 2026" style="width:250px; height:100px; border-radius:10px; object-fit:contain; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">Certificate of Participation — ADScAI 2026</div>
+                <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">Applied Data Science &amp; AI Conference · UoM</div>
+                <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">28 April 2026</div>
+                <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#f97316; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.2);">✓ Participated</span>
+            </div>
+        </a>
+
+        <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;">
+            <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#38bdf8;"></div>
+            <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('dp900_badge.png')">
+                <img src="dp900_badge.png" alt="DP-900" style="width:300px; height:100px; border-radius:10px; object-fit:contain; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">Microsoft Azure Data Fundamentals</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">DP-900 · Microsoft</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">April 2026</div>
+            <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#38bdf8; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.2);">✓ Certified</span>
+        </div>
+
+        <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;">
+            <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#fbbf24;"></div>
+            <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('data_odyssey.jpg')">
+                <img src="data_odyssey.jpg" alt="Data Odyssey" style="width:300px; height:100px; border-radius:10px; object-fit:contain; background:rgba(251,191,36,0.08); border:1px solid rgba(251,191,36,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">Data Odyssey 2025 — Champions</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">DatAInspire · KDU</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">October 2025</div>
+            <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#fbbf24; background:rgba(251,191,36,0.08); border:1px solid rgba(251,191,36,0.2);">1st Place</span>
+        </div>
+
+        <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;">
+            <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#e8491f;"></div>
+            <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('mathwork.png')">
+                <img src="mathwork.png" alt="MATLAB Onramp" style="width:300px; height:100px; border-radius:10px; object-fit:contain; background:rgba(232,73,31,0.08); border:1px solid rgba(232,73,31,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">MATLAB Onramp — 100% Completed</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">MathWorks · Training Services</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">June 2024</div>
+            <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#e8491f; background:rgba(232,73,31,0.08); border:1px solid rgba(232,73,31,0.2);">✓ Completed</span>
+        </div>
+
+        <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;">
+            <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#818cf8;"></div>
+            <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('coloursnightdancing.jpeg')">
+                <img src="coloursnightdancing.jpeg" alt="KDU Colours Night" style="width:300px; height:100px; border-radius:10px; object-fit:contain; background:rgba(129,140,248,0.08); border:1px solid rgba(129,140,248,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">Certificate of Recognition — Colours Night 2024</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">Dancing Performances · KDU</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">2024</div>
+            <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#818cf8; background:rgba(129,140,248,0.08); border:1px solid rgba(129,140,248,0.2);">✓ Recognised</span>
+        </div>
+
+        <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;">
+            <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#e11d48;"></div>
+            <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('uoc.jpeg')">
+                <img src="uoc.jpeg" alt="UoC Certificate" style="width:300px; height:100px; border-radius:10px; object-fit:contain; background:rgba(225,29,72,0.08); border:1px solid rgba(225,29,72,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">Certificate in Computer Applications — Distinction</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">IHRA · University of Colombo</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">May – Nov 2023</div>
+            <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#e11d48; background:rgba(225,29,72,0.08); border:1px solid rgba(225,29,72,0.2);">✓ Distinction</span>
+        </div>
+
+        <div style="background:#0f1929; border:1px solid rgba(56,189,248,0.1); border-radius:10px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; position:relative; overflow:hidden;">
+            <div style="position:absolute; bottom:0; left:0; right:0; height:2px; background:#818cf8;"></div>
+            <div style="overflow:hidden; border-radius:10px; cursor:zoom-in;" onclick="openCert('meritcertificate.jpeg')">
+                <img src="meritcertificate.jpeg" alt="Musaeus Merit Certificate" style="width:300px; height:100px; border-radius:10px; object-fit:contain; background:rgba(129,140,248,0.08); border:1px solid rgba(129,140,248,0.15); transition:transform 0.35s ease; display:block;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; color:#dde6f0; line-height:1.4;">2nd Class Certificate of Merit</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#7a93ab; letter-spacing:0.04em;">Musaeus College Colombo</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:rgba(122,147,171,0.5);">November 2022</div>
+            <span style="font-family:'Space Mono',monospace; font-size:0.58rem; padding:2px 9px; border-radius:20px; color:#818cf8; background:rgba(129,140,248,0.08); border:1px solid rgba(129,140,248,0.2);">✓ Merit</span>
+        </div>
+
+    </div><!-- end certifications grid -->
+
+</section>
+
+<!-- Fullscreen Lightbox -->
+<div id="certLightbox" onclick="closeCert()" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(4,8,16,0.95); align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(8px);">
+    <div style="position:relative; max-width:90vw; max-height:90vh;">
+        <img id="certLightboxImg" src="" alt="Certificate" style="max-width:90vw; max-height:90vh; border-radius:12px; border:1px solid rgba(56,189,248,0.25); object-fit:contain; display:block;">
+        <div style="position:absolute; top:-36px; right:0; font-family:'Space Mono',monospace; font-size:0.72rem; color:rgba(56,189,248,0.5); letter-spacing:0.08em;">ESC or click to close</div>
+    </div>
+</div>
+
+<script>
+function openCert(src) {
+    const lb = document.getElementById('certLightbox');
+    document.getElementById('certLightboxImg').src = src;
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function closeCert() {
+    document.getElementById('certLightbox').style.display = 'none';
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeCert();
+});
+</script>
+
+    <section id="extra" class="section">
+        <div class="section-header">
+            <span class="section-tag">// beyond_the_data.py</span>
+            <h2 class="section-title">Extracurricular Activities</h2>
+        </div>
+        <div class="extra-grid">
+
+            <a href="toasmasters.html?from=extra" class="extra-card-link">
+                <div class="extra-card">
+                    <div class="extra-img-wrap">
+                        <img src="TM.png" class="extra-img" alt="Toastmasters">
+                        <div class="extra-img-overlay"><span>View Gallery →</span></div>
+                    </div>
+                    <div class="extra-body">
+                        <h3>Public Speaking &amp; Hosting 🎤</h3>
+                        <p>Active Toastmasters member and experienced event host, developing public speaking, leadership, and communication skills through speeches, evaluations, and live compering roles.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="singing.html?from=extra" class="extra-card-link">
+                <div class="extra-card">
+                    <div class="extra-img-wrap">
+                        <img src="singing.jpeg" class="extra-img" alt="Singing">
+                        <div class="extra-img-overlay"><span>View Gallery →</span></div>
+                    </div>
+                    <div class="extra-body">
+                        <h3>Singing 🎶</h3>
+                        <p>Passionate about singing and performing at events, demonstrating creativity, confidence, and audience engagement, along with excellent communication and stage performance abilities.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="dancing.html?from=extra" class="extra-card-link">
+                <div class="extra-card">
+                    <div class="extra-img-wrap">
+                        <img src="dancing5.jpeg" class="extra-img" alt="Dancing">
+                        <div class="extra-img-overlay"><span>View Gallery →</span></div>
+                    </div>
+                    <div class="extra-body">
+                        <h3>Dancing 💃</h3>
+                        <p>Actively involved in dance performances, showcasing creativity, discipline, and teamwork, with a strong commitment to consistency, continuous improvement, and performance excellence.</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+        <div class="section-header">
+            <span class="section-tag">// init_contact.sh</span>
+            <h2 class="section-title">Contact</h2>
+        </div>
+        <div class="contact-content">
+            <p>I'd love to connect. Reach out for opportunities, collaborations, or just a friendly chat.</p>
+
+            <form id="contactForm" action="https://formspree.io/f/mbdwldgg" method="POST" style="margin-top:32px; max-width:520px;">
+                <div style="margin-bottom:14px;">
+                    <input type="text" name="name" placeholder="NAME" required
+                        style="width:100%; padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.2);
+                        border-radius:6px; color:#dde6f0; font-family:'Space Mono',monospace; font-size:0.78rem;
+                        letter-spacing:0.08em; outline:none; box-sizing:border-box; transition:border-color 0.2s;"
+                        onfocus="this.style.borderColor='rgba(56,189,248,0.6)'"
+                        onblur="this.style.borderColor='rgba(56,189,248,0.2)'">
+                </div>
+                <div style="margin-bottom:14px;">
+                    <input type="email" name="email" placeholder="EMAIL" required
+                        style="width:100%; padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.2);
+                        border-radius:6px; color:#dde6f0; font-family:'Space Mono',monospace; font-size:0.78rem;
+                        letter-spacing:0.08em; outline:none; box-sizing:border-box; transition:border-color 0.2s;"
+                        onfocus="this.style.borderColor='rgba(56,189,248,0.6)'"
+                        onblur="this.style.borderColor='rgba(56,189,248,0.2)'">
+                </div>
+                <div style="margin-bottom:20px;">
+                    <textarea name="message" placeholder="MESSAGE" rows="5" required
+                        style="width:100%; padding:14px 16px; background:#0f1929; border:1px solid rgba(56,189,248,0.2);
+                        border-radius:6px; color:#dde6f0; font-family:'Space Mono',monospace; font-size:0.78rem;
+                        letter-spacing:0.08em; outline:none; box-sizing:border-box; resize:vertical; transition:border-color 0.2s;"
+                        onfocus="this.style.borderColor='rgba(56,189,248,0.6)'"
+                        onblur="this.style.borderColor='rgba(56,189,248,0.2)'"></textarea>
+                </div>
+                <button type="submit"
+                    style="width:100%; padding:15px; background:#2e5a98; border:none; border-radius:6px;
+                    color:#0b1221; font-family:'Space Mono',monospace; font-size:0.82rem; font-weight:700;
+                    letter-spacing:0.12em; cursor:pointer; transition:background 0.2s;"
+                    onmouseover="this.style.background='#2e5a98cc'"
+                    onmouseout="this.style.background='#2e5a98'">
+                    SEND TRANSMISSION
+                </button>
+                <div id="formStatus" style="margin-top:14px; font-family:'Space Mono',monospace;
+                    font-size:0.75rem; text-align:center; display:none;"></div>
+            </form>
+
+            <div class="contact-links" style="margin-top:36px;">
+                <a href="mailto:indummaa2003@gmail.com?subject=Portfolio Inquiry" class="contact-link">
+                    <span class="contact-icon">✉</span> indummaa2003@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/chamali-abeysekara" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-icon">in</span> LinkedIn
+                </a>
+                <a href="https://github.com/Chamali27" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-icon">⌥</span> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ═══ FOOTER with copyright ═══ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+// ═══ ROTATING TITLE ENGINE ═══
+(function() {
+    const TITLES = [
+        "Aspiring Data Analyst",
+        "Lifelong Learner in AI & Data Science",
+        "Data Analytics Enthusiast"
+    ];
+    const INTERVAL = 2800;   // ms between rotations
+    const TRANSITION = 550;  // ms — must match CSS transition duration
+
+    function setupRotator(innerId, wrapId) {
+        const inner = document.getElementById(innerId);
+        const wrap  = document.getElementById(wrapId);
+        if (!inner || !wrap) return;
+
+        // Measure the widest item so the container never jumps
+        const items = inner.querySelectorAll('.rt-item');
+        let maxW = 0;
+        items.forEach(item => {
+            item.style.visibility = 'hidden';
+            document.body.appendChild(item);
+            maxW = Math.max(maxW, item.offsetWidth);
+            inner.appendChild(item);
+            item.style.visibility = '';
+        });
+        wrap.style.width = (maxW + 40) + 'px';
+
+        let current = 0;
+        const realCount = TITLES.length; // clone is index realCount
+
+        setInterval(() => {
+            current++;
+            const itemH = items[0].offsetHeight;
+            inner.style.transform = `translateY(-${current * itemH}px)`;
+
+            // When we land on the clone (index realCount), snap back silently
+            if (current === realCount) {
+                setTimeout(() => {
+                    inner.style.transition = 'none';
+                    current = 0;
+                    inner.style.transform = 'translateY(0)';
+                    // Re-enable transition after a frame
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            inner.style.transition = '';
+                        });
+                    });
+                }, TRANSITION);
+            }
+        }, INTERVAL);
+    }
+
+    // Run after DOM is ready
+    window.addEventListener('DOMContentLoaded', () => {
+        setupRotator('introRtInner', 'introRotating');
+        setupRotator('heroRtInner',  'heroRotating');
+    });
+})();
+
+
+// ═══ INTRO SCREEN ═══
+(function() {
+    const screen   = document.getElementById('introScreen');
+    const enterBtn = document.getElementById('introEnter');
+
+    if (sessionStorage.getItem('introSeen')) {
+        screen.classList.add('hidden');
+        return;
+    }
+
+    const canvas = document.getElementById('introCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animId;
+
+    function resizeCanvas() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    function initParticles() {
+        particles = [];
+        const count = Math.floor((canvas.width * canvas.height) / 14000);
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x:  Math.random() * canvas.width,
+                y:  Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                r:  Math.random() * 1.5 + 0.5,
+                a:  Math.random() * 0.5 + 0.1
+            });
+        }
+    }
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0) p.x = canvas.width;
+            if (p.x > canvas.width) p.x = 0;
+            if (p.y < 0) p.y = canvas.height;
+            if (p.y > canvas.height) p.y = 0;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(56,189,248,${p.a})`;
+            ctx.fill();
+        });
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < 100) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(56,189,248,${0.08 * (1 - dist/100)})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+        animId = requestAnimationFrame(drawParticles);
+    }
+
+    resizeCanvas();
+    initParticles();
+    drawParticles();
+    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+
+    function dismissIntro() {
+        screen.classList.add('hiding');
+        cancelAnimationFrame(animId);
+        sessionStorage.setItem('introSeen', 'true');
+        setTimeout(() => screen.classList.add('hidden'), 850);
+        document.removeEventListener('keydown', dismissIntro);
+    }
+
+    enterBtn.addEventListener('click', dismissIntro);
+    setTimeout(() => { document.addEventListener('keydown', dismissIntro); }, 3000);
+})();
+
+
+// ═══ COUNTERS ═══
+const counters = document.querySelectorAll('.counter');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = +el.dataset.target;
+            const suffix = el.dataset.suffix || '';
+            let current = 0;
+            const step = target / 40;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = Math.floor(current) + suffix;
+            }, 35);
+            observer.unobserve(el);
+        }
+    });
+}, { threshold: 0.5 });
+counters.forEach(c => observer.observe(c));
+
+// ═══ HAMBURGER ═══
+const hamburger = document.getElementById('hamburger');
+const navList = document.querySelector('.nav-list');
+hamburger?.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    hamburger.classList.toggle('active');
+});
+
+// ═══ CARD ANIMATIONS ═══
+const cards = document.querySelectorAll('.project-card, .extra-card, .insight-card, .question-card');
+const cardObserver = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationDelay = `${(i % 3) * 0.08}s`;
+            entry.target.classList.add('visible');
+            cardObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+cards.forEach(c => cardObserver.observe(c));
+</script>
+
+<script>
+(function() {
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    if (!form) return;
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.textContent = 'SENDING...';
+        btn.disabled = true;
+
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                status.style.display = 'block';
+                status.style.color = '#4ade80';
+                status.textContent = '✓ Message received. I\'ll get back to you soon!';
+                form.reset();
+                btn.textContent = 'SEND TRANSMISSION';
+                btn.disabled = false;
+            } else {
+                throw new Error('Server error');
+            }
+        } catch {
+            status.style.display = 'block';
+            status.style.color = '#f87171';
+            status.textContent = '✗ Something went wrong. Please email me directly.';
+            btn.textContent = 'SEND TRANSMISSION';
+            btn.disabled = false;
+        }
+    });
+})();
+</script>
+</body>
+</html>

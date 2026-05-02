@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Arrival Performance Analysis | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-hero-tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Individual Project</span>
+            </div>
+            <h1>U.S. Flight Arrival Performance Analysis</h1>
+            <p class="project-hero-sub">
+                A comprehensive analysis of U.S. airline performance (2010–2025), uncovering delay patterns, root causes, and airport-level inefficiencies using SQL and Power BI.
+            </p>
+        </div>
+    </div>
+
+    <div class="stats-strip">
+        <div class="stat-item"><div class="stat-num">102M+</div><div class="stat-label">Total Flights</div></div>
+        <div class="stat-item"><div class="stat-num">20M+</div><div class="stat-label">Delay Hours</div></div>
+        <div class="stat-item"><div class="stat-num">1.89%</div><div class="stat-label">Cancellation Rate</div></div>
+        <div class="stat-item"><div class="stat-num">2010–25</div><div class="stat-label">Data Range</div></div>
+    </div>
+
+    <div class="project-body">
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Project Overview</h2>
+            <p>This project analyzes U.S. flight arrival performance using the Bureau of Transportation Statistics (BTS) On-Time dataset. The analysis covers over 100 million flights from 2010 to 2025, focusing on delays, cancellations, diversions, and operational efficiency. SQL Server was used for large-scale data transformation, while Power BI enabled interactive dashboards for trend analysis and decision-making insights.</p>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Questions Explored</h2>
+            <div class="questions-grid">
+                <div class="question-card">How have flight delays, cancellations, and diversions evolved over time?</div>
+                <div class="question-card">What are the main root causes of flight delays?</div>
+                <div class="question-card">Which airlines experience the highest operational disruptions?</div>
+                <div class="question-card">How does airport-level performance vary across the U.S.?</div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Methodology</h2>
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="method-num">01</div>
+                    <div class="method-text">
+                        <strong>Data Collection</strong>
+                        <p>Retrieved flight performance data from the U.S. Bureau of Transportation Statistics (TranStats), covering 2010–2025.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">02</div>
+                    <div class="method-text">
+                        <strong>Data Cleaning & Storage</strong>
+                        <p>Processed raw datasets in SQL Server, handled missing values, standardized delay metrics, and ensured data consistency.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">03</div>
+                    <div class="method-text">
+                        <strong>Data Aggregation</strong>
+                        <p>Created optimized SQL views at airline and airport levels to compute KPIs such as delays, cancellations, and diversion rates.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">04</div>
+                    <div class="method-text">
+                        <strong>Dashboard Development</strong>
+                        <p>Built interactive Power BI dashboards with DAX measures for delay impact, averages, and root cause analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card"><div class="insight-icon">📉</div><div class="insight-text">Flight disruptions dropped sharply in 2020 due to COVID-19, followed by a strong recovery trend in subsequent years.</div></div>
+                <div class="insight-card"><div class="insight-icon">⏱️</div><div class="insight-text">Over 20 million delay hours were recorded, making delays the most significant operational challenge compared to cancellations.</div></div>
+                <div class="insight-card"><div class="insight-icon">✈️</div><div class="insight-text">Late-arriving aircraft and carrier-related issues were the leading causes of delays, highlighting schedule dependency problems.</div></div>
+                <div class="insight-card"><div class="insight-icon">🌦️</div><div class="insight-text">Seasonal peaks in delays occur during mid-year (July), driven by high passenger demand and weather disruptions.</div></div>
+                <div class="insight-card"><div class="insight-icon">🏢</div><div class="insight-text">Smaller regional airports showed significantly higher average delays compared to major hubs, indicating localized inefficiencies.</div></div>
+                <div class="insight-card"><div class="insight-icon">🔄</div><div class="insight-text">Diversions are used frequently as an operational strategy, with a notably high system-wide diversion rate across all years.</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Dashboards</h2>
+            <img src="flight01.png" class="project-dashboard" alt="Flight Dashboard 1">
+            <img src="flight02.png" class="project-dashboard" alt="Flight Dashboard 2">
+            <img src="flight03.png" class="project-dashboard" alt="Flight Dashboard 3">
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// GitHub Repository</h2>
+            <a href="https://github.com/Chamali27/US-Flight-Arrival-Performance.git" class="github-btn" target="_blank">
+                ⌥ View Project on GitHub →
+            </a>
+        </section>
+
+        <a href="index.html#projects" class="btn btn-primary" style="margin-top:1rem;">← Back to Projects</a>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.insight-card, .question-card');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    cards.forEach(c => obs.observe(c));
+</script>
+
+</body>
+</html>

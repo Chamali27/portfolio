@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Odyssey 2025 | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Hero -->
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <a href="index.html#achievements" class="back-btn" style="margin-bottom:1.5rem; display:inline-flex;">← Back to Portfolio</a>
+            <div class="project-hero-tags">
+                <span class="tag">Association Rule Mining</span>
+                <span class="tag">Python</span>
+                <span class="tag">Data Analytics</span>
+                <span class="tag">DatAInspire KDU</span>
+            </div>
+            <h1>🏆 Data Odyssey 2025 - First Place</h1>
+            <p class="project-hero-sub">
+                Designed and developed <strong style="color:var(--accent);">Cart Connect</strong> - an intelligent shopping trolley system 
+                using Association Rule Mining for real-time product recommendations, item detection, 
+                and smart retail navigation. Organised by DatAInspire KDU · October 2025.
+            </p>
+
+            <!-- Stats row -->
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:1.5rem;">
+                <span class="project-stat">🥇 1st Place</span>
+                <span class="project-stat">Association Rule Mining</span>
+                <span class="project-stat">DatAInspire · KDU</span>
+                <span class="project-stat">October 2025</span>
+            </div>
+        </div>
+    </div>
+
+        <!-- Photo Gallery -->
+        <div class="project-section">
+            <div class="project-section-title" style="text-align:center;">// gallery</div>
+            <div class="masonry-gallery">
+                <img src="img1.jpeg" alt="Data Odyssey Award Ceremony" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="img3.jpeg" alt="Team Presentation" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="WhatsApp Image 2026-02-08 at 21.17.50.jpeg" alt="Team Discussion" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+                <img src="img5.jpeg" alt="Certificate" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="img.jpeg" alt="Dashboard Showcase" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="222.jpeg" alt="Group Photo" onclick="openZoom(this.src)" style="width:520px; max-width:100%; border-radius:12px; border:1px solid rgba(245,200,66,0.2); object-fit:cover; cursor:zoom-in; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+
+        <a href="index.html#achievements" class="back-btn">← Back to Portfolio</a>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+<script>
+function openZoom(src) {
+    const lb = document.getElementById('zoom-overlay');
+    document.getElementById('zoom-img').src = src;
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function closeZoom() {
+    document.getElementById('zoom-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeZoom(); });
+const hamburger = document.getElementById('hamburger');
+const navList = document.querySelector('.nav-list');
+hamburger?.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    hamburger.classList.toggle('active');
+});
+</script>
+
+<!-- Zoom Lightbox -->
+<div id="zoom-overlay" onclick="closeZoom()" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(4,8,16,0.96); align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(10px);">
+    <img id="zoom-img" src="" alt="" style="max-width:90vw; max-height:90vh; border-radius:12px; border:1px solid rgba(56,189,248,0.25); object-fit:contain; display:block;">
+    <div style="position:fixed; bottom:24px; left:0; right:0; text-align:center; font-family:'Space Mono',monospace; font-size:0.62rem; color:rgba(56,189,248,0.4);">ESC or click to close</div>
+</div>
+
+</body>
+</html>

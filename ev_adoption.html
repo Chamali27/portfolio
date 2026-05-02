@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global EV Adoption Analysis | Chamali Abeysekara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-list">
+            <li><a href="index.html#home"><span class="nav-num">00.</span>Home</a></li>
+            <li><a href="index.html#about"><span class="nav-num">01.</span>About</a></li>
+            <li><a href="index.html#skills"><span class="nav-num">02.</span>Skills</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span>Projects</a></li>
+            <li><a href="index.html#achievements"><span class="nav-num">04.</span>Achievements</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <div class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-hero-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Data Modeling</span>
+                <span class="tag">Sustainability</span>
+                <span class="tag">Group Project</span>
+            </div>
+            <h1>Global EV Adoption Analysis</h1>
+            <p class="project-hero-sub">
+                A global model analyzing environmental and economic impacts of electric vehicle adoption,
+                including CO₂ reduction, energy demand, and long-term cost savings.
+            </p>
+        </div>
+    </div>
+
+    <div class="stats-strip">
+        <div class="stat-item"><div class="stat-num">5M+</div><div class="stat-label">CO₂ Tons Saved</div></div>
+        <div class="stat-item"><div class="stat-num">1.95</div><div class="stat-label">Tons/EV/Year</div></div>
+        <div class="stat-item"><div class="stat-num">2030</div><div class="stat-label">Forecast Horizon</div></div>
+        <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Scenarios Modeled</div></div>
+    </div>
+
+    <div class="project-body">
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Project Overview</h2>
+            <p>This project analyzes the global transition from Internal Combustion Engine (ICE) vehicles to Electric Vehicles (EVs). It evaluates environmental impact through emission reductions, economic benefits through cost savings, and future adoption trends using predictive modeling with Prophet and logistic growth models.</p>
+            <div class="team-row">
+                <span class="team-label">Team:</span>
+                <span class="team-members">WACI Abeysekara &nbsp;·&nbsp; RL Hewanayaka &nbsp;·&nbsp; MZM Hussein &nbsp;·&nbsp; MN Mohamed</span>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Questions Explored</h2>
+            <div class="questions-grid">
+                <div class="question-card">How much CO₂ can be reduced through global EV adoption?</div>
+                <div class="question-card">How do EVs compare with ICE vehicles environmentally?</div>
+                <div class="question-card">What are the future EV adoption scenarios up to 2030?</div>
+                <div class="question-card">Are EVs economically beneficial in the long term?</div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Methodology</h2>
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="method-num">01</div>
+                    <div class="method-text">
+                        <strong>Data Collection</strong>
+                        <p>Used vehicle, energy, and emission datasets sourced from multiple global organizations and open data repositories.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">02</div>
+                    <div class="method-text">
+                        <strong>Data Preprocessing</strong>
+                        <p>Cleaned, merged, and standardized datasets in Python for consistent cross-country global analysis.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">03</div>
+                    <div class="method-text">
+                        <strong>Model Development</strong>
+                        <p>Built emission and cost comparison models contrasting EV and ICE vehicle lifecycles across regions.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">04</div>
+                    <div class="method-text">
+                        <strong>Forecasting</strong>
+                        <p>Applied Prophet and logistic growth models to predict EV adoption trends through 2030.</p>
+                    </div>
+                </div>
+                <div class="method-step">
+                    <div class="method-num">05</div>
+                    <div class="method-text">
+                        <strong>Scenario Analysis</strong>
+                        <p>Simulated optimistic, business-as-usual, and pessimistic adoption scenarios to quantify outcome ranges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card"><div class="insight-icon">🌍</div><div class="insight-text">EV adoption has already saved over 5 million tons of CO₂ globally, with savings accelerating year on year.</div></div>
+                <div class="insight-card"><div class="insight-icon">⚡</div><div class="insight-text">Energy demand shifts progressively from fossil fuels to electricity as EV penetration grows.</div></div>
+                <div class="insight-card"><div class="insight-icon">💰</div><div class="insight-text">EVs deliver significant long-term cost savings despite higher upfront purchase prices.</div></div>
+                <div class="insight-card"><div class="insight-icon">🔋</div><div class="insight-text">Transitioning to cleaner energy grids dramatically amplifies the environmental benefits of EVs.</div></div>
+                <div class="insight-card"><div class="insight-icon">📈</div><div class="insight-text">Aggressive adoption scenarios project over 30% emission reduction in the transport sector by 2030.</div></div>
+                <div class="insight-card"><div class="insight-icon">🏛️</div><div class="insight-text">Policy support, subsidies, and charging infrastructure are identified as the key drivers of EV adoption.</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// Research Paper</h2>
+            <p style="color:var(--text-muted); margin-bottom:1.25rem; font-style:italic;">"Global Model for Analyzing Environmental and Economic Impacts of Electric Vehicle Adoption"</p>
+            <a href="EV_Adoption_Global_Model.pdf" class="github-btn" target="_blank">
+                ⌥ View Research Paper (PDF) →
+            </a>
+        </section>
+
+        <section class="project-section">
+            <h2 class="project-section-title">// GitHub Repository</h2>
+            <a href="https://github.com/Chamali27/EV_Global_Model.git" class="github-btn" target="_blank">
+                ⌥ View Project on GitHub →
+            </a>
+        </section>
+
+        <a href="index.html#projects" class="btn btn-primary" style="margin-top:1rem;">← Back to Projects</a>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>CA<span class="logo-bracket">]</span></span>
+        <p> © 2026 Chamali Abeysekara</p>
+        <span class="footer-code">console.log("thanks for visiting");</span>
+    </div>
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.insight-card, .question-card');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    cards.forEach(c => obs.observe(c));
+</script>
+
+</body>
+</html>
